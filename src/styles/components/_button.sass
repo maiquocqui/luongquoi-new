@@ -1,0 +1,51 @@
+// BUTTON
+.btn-main
+	display: inline-block
+	+fs(14rem)
+	line-height: 36px
+	// font-weight: 500
+	color: $white
+	padding: 0px 30px
+	text-align: center
+	text-transform: uppercase
+	+bor-rad(50px)
+	background: $main
+	+transition(all,0.5s)
+	+media-breakpoint-down(sm)
+		padding: 0px 25px
+	&:hover
+		background: $blue
+		// box-shadow: 0px 10px 20px -10px color-rgba($blue,1)
+	&.big
+		line-height: 50px
+		padding: 0px 50px
+		+fs(14rem)
+		text-transform: uppercase
+	&.disabled
+		background: darken($white,20%)
+		pointer-events: none
+		&:hover
+			box-shadow: none
+
+.btn-outline
+	@extend .btn-main
+	background: $white
+	border: 1px solid darken($white,10%)
+	color: darken($white,60%)
+	+bor-rad(50px)
+	&:hover
+		color: $white
+		background: $blue
+		border-color: $blue
+.button
+	display: inline-block
+	background: $red
+	color: $white
+	+fs(16rem)
+	line-height: 40px
+	padding: 0px 30px
+	+media-breakpoint-down(sm)
+		+fs(14rem)
+		line-height: 36px
+	&:hover
+		background: darken($red,20%)

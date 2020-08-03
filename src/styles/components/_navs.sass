@@ -1,0 +1,178 @@
+.home-navs
+	+pos(rel,null)
+	.nav-tabs
+		margin: 0
+		padding: 0
+		border: none
+		// border-bottom: 1px solid darken($white,5%)
+		.nav-item
+			margin: 0
+			padding: 0
+			+ .nav-item
+				margin-left: 30px
+				+media-breakpoint-down(md)
+					margin-left: 20px
+			.nav-link
+				display: block
+				margin: 0
+				padding: 0
+				background: none
+				border: none
+				+bor-rad(50px)
+				+fs(16rem)
+				text-transform: capitalize
+				color: darken($white,60%)
+				padding: 10px 0
+				color: $main
+				+pos(rel,null)
+				+media-breakpoint-down(md)
+					+fs(14rem)
+					padding: 8px 0
+				+media-breakpoint-down(sm)
+					+fs(13rem)
+					padding: 5px 0
+				&:after
+					content: ''
+					display: block
+					+pos(abs, null 0 -1px 0)
+					z-index: 3
+					height: 1px
+					background: $blue
+					opacity: 0
+				&:hover, &.active
+					color: $blue
+					font-weight: 500
+					&:after
+						opacity: 1
+.search-navs
+	.nav-tabs
+		margin: 0
+		padding: 0
+		border: none
+		+bor-rad(0)
+		+media-breakpoint-down(lg)
+			justify-content: center
+			border-bottom: 1px solid darken($white,5%)
+		.nav-item
+			margin: 0
+			padding: 0
+			border: none
+			+media-breakpoint-down(lg)
+				width: 50%
+			+ .nav-item
+				margin-left: 10px
+				+media-breakpoint-down(lg)
+					margin-left: 0
+			.nav-link
+				margin: 0
+				padding: 0
+				border: none
+				+bor-rad(100px)
+				+fs(14rem)
+				font-weight: 500
+				line-height: 16px
+				border: 1px solid $blue
+				padding: 10px 30px
+				text-align: center
+				text-transform: capitalize
+				color: $blue
+				+pos(rel,null)
+				+media-breakpoint-down(lg)
+					+fs(14rem)
+					line-height: 20px
+					padding: 0px 0px 10px
+					border: none
+					+bor-rad(0)
+					font-weight: 400
+					background: none
+					color: darken($white,60%)
+					&:before
+						content: ''
+						display: block
+						+pos(abs, null 0 -1px 0)
+						height: 1px
+						background: $blue
+						z-index: 1
+						opacity: 0
+				&:hover
+					+media-breakpoint-up(xl)
+						background: $blue
+						color: $white
+				&.active
+					color: $white
+					background: $main
+					border-color: $main
+					+media-breakpoint-down(lg)
+						color: $blue
+						background: none
+						font-weight: 500
+						&:before
+							opacity: 1
+
+.product-tabs
+	border: none
+	margin-bottom: 15px
+	+media-breakpoint-down(md)
+		display: block
+		white-space: nowrap
+		overflow: auto
+	.nav-item
+		margin: 0
+		padding: 0
+		border: none
+		+media-breakpoint-down(md)
+			display: inline-block !important
+			vertical-align: top
+		+ .nav-item
+			margin-left: 10px
+			+media-breakpoint-down(md)
+				margin-left: 5px
+		.nav-link
+			margin: 0
+			padding: 0
+			border: none
+			background: none
+			+bor-rad(50px)
+			padding: 8px 25px
+			+fs(14rem)
+			color: $main
+			border: 1px solid darken($white,10%)
+			&:hover
+				color: $blue
+			&.active
+				color: $white
+				background: $blue
+				border-color: $blue
+
+.news-tabs
+	margin: 0
+	padding: 0
+	border: none
+	display: block
+	white-space: nowrap
+	overflow: auto
+	.nav-item
+		margin: 0
+		padding: 0
+		display: inline-block
+		vertical-align: top
+		+ .nav-item
+			margin-left: 20px
+		.nav-link
+			margin: 0
+			padding: 0
+			border: none
+			display: block
+			+fs(14rem)
+			font-weight: 600
+			text-transform: uppercase
+			background: none
+			color: darken($white,60%)
+			&:hover, &:focus
+				background: none
+				border: none
+				outline: none
+			&:hover
+				color: $black
+			&.active
+				color: $blue

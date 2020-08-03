@@ -1,0 +1,238 @@
+body.modal-open
+	padding-right: 0 !important
+	.modal
+		&::-webkit-scrollbar-track
+		&::-webkit-scrollbar
+			width: 0
+		&::-webkit-scrollbar-thumb
+.modal-backdrop
+	-webkit-backdrop-filter: blur(10px)
+	backdrop-filter: blur(10px)
+.modal
+	padding-right: 0 !important
+.modal-dialog
+	margin: 60px auto
+	.modal-content
+		+bor-rad(5px)
+		border: none
+		overflow: hidden
+		// box-shadow: 0px 10px 20px -10px color-rgba($black,0.5)
+		+pos(rel,null)
+	.modal-header
+		padding: 13px 15px 10px
+		border: none
+		// border-bottom: 1px solid $color-default
+		+pos(rel,null)
+		.modal-title
+			+fs(16rem)
+			font-weight: 700
+			margin: 0
+			padding: 0
+			// text-transform: uppercase
+			// &:before
+			// 	content: ''
+			// 	+pos(abs, 0 0 null 0)
+			// 	height: 3px
+			// 	background: $blue
+		.close
+			margin: 0
+			padding: 0
+			opacity: 1
+			+pos(abs, 11px 10px null null)
+			color: $white
+			text-shadow: none
+			+transition(all,0.5s)
+			.material-icons
+				+flexbox
+				width: 26px
+				height: 26px
+				align-items: center
+				align-content: center
+				justify-content: center
+				background: $blue
+				+bor-rad(100px)
+				color: $white
+				text-shadow: none
+
+				+fs(16rem)
+			&:hover
+				color: $red
+	.modal-body
+		padding: 15px
+	&.modal-check
+		min-width: 800px
+		+media-breakpoint-down(lg)
+			min-width: 800px
+		+media-breakpoint-down(md)
+			min-width: 100%
+		+media-breakpoint-down(sm)
+			margin: 0
+		.check-form
+			max-width: 300px
+			+media-breakpoint-down(xs)
+				max-width: 100%
+			.search-wrap
+				label
+					display: block
+					+fs(14rem)
+					font-weight: 500
+					padding: 5px 0
+				.searchbox
+					+flexbox
+					+pos(rel,null)
+					.searchbutton
+						width: 40px
+						text-align: center
+						+pos(abs, 0 0 0 null)
+						+flexbox
+						align-items: center
+						align-content: center
+						justify-content: center
+						.material-icons
+							display: block
+						&:hover
+							color: $blue
+	&.modal-check2
+		// min-width: 600px
+		+media-breakpoint-down(sm)
+			max-width: unset
+			width: 100%
+		.modal-content
+			+media-breakpoint-down(sm)
+				min-height: 100vh
+		.warranty-info
+			.product
+				+flexbox
+				align-items: flex-start
+				align-content: flex-start
+				+bor-rad(5px)
+				border: 1px solid darken($white,10%)
+				padding: 20px
+				margin-bottom: 15px
+				+media-breakpoint-down(sm)
+					padding: 10px
+				.img
+					width: 40%
+					+flexbox
+					align-items: center
+					align-content: center
+					+media-breakpoint-down(sm)
+						width: 80px
+					img
+						max-width: 90%
+						max-height: 90%
+				.caption
+					width: 60%
+					padding-left: 20px
+					+media-breakpoint-down(sm)
+						width: calc(100% - 80px)
+						padding-left: 15px
+					ul
+						li
+							+fs(14rem)
+							color: darken($white,60%)
+							margin-bottom: 5px
+							+media-breakpoint-down(sm)
+								+fs(12rem)
+								margin-bottom: 0
+							span
+								color: $main
+								font-weight: 500
+							.name
+								color: $blue
+								+fs(16rem)
+								+media-breakpoint-down(sm)
+									+fs(13rem)
+							.dateend
+								color: $red
+
+	&.modal-address
+		min-width: 200px
+		.address-list
+			ul
+				+flexbox
+				flex-wrap: wrap
+				margin: 0px -5px
+				li
+					padding: 0px 5px
+					width: 50%
+					+media-breakpoint-down(sm)
+						width: 100%
+					.address-item
+						display: block
+						+bor-rad(5px)
+						text-align: left
+						+fs(14rem)
+						padding: 10px
+						border: 1px dashed darken($white,10%)
+						margin-bottom: 10px
+						+pos(rel,null)
+						+media-breakpoint-down(sm)
+							+fs(13rem)
+						&:after
+							content: '\f00c'
+							width: 14px
+							height: 14px
+							background: $blue
+							color: $white
+							+bor-rad(50px)
+							z-index: 1
+							+flexbox
+							+fs(12rem)
+							align-items: center
+							align-content: center
+							justify-content: center
+							+pos(abs, null 10px 10px null)
+							opacity: 0
+						.name
+							font-weight: 700
+						&:hover
+							border-color: lighten($blue,10%)
+							background: color-rgba($blue,0.05)
+						&.active
+							border-color: lighten($blue,10%)
+							background: color-rgba($blue,0.05)
+							&:after
+								opacity: 1
+	&.modal-bank
+		max-width: 900px
+		margin: 0 auto
+		.modal-body
+			+media-breakpoint-down(sm)
+				max-height: calc(100vh - 48px)
+				overflow: auto
+	&.modal-specification
+		max-width: 800px
+		.modal-title
+			.change-option
+				+fs(0)
+				&:before 
+					content: '\f0ad'
+					font-family: 'fontawesome'
+					+fs(18rem)
+	&.modal-repay
+		margin: 0 auto
+	&.modal-picture
+		max-width: 800px
+		+media-breakpoint-down(sm)
+			margin: 0
+		.modal-content
+			+media-breakpoint-down(sm)
+				min-height: 100vh
+		.instagram-pic
+			+media-breakpoint-down(sm)
+				margin-bottom: 20px
+		.post-link
+			+flexbox
+			a
+				+ a
+					margin-left: 20px
+					border-left: 1px solid darken($white,10%)
+					padding-left: 20px
+		.post-product
+			.slick-track
+				+flexbox
+				.slick-slide
+					height: unset
+					> div, .item
+						height: 100%

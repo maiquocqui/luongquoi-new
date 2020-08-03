@@ -1,0 +1,70 @@
+.subscribe-wrap
+	background: darken($white, 10%)
+	+flexbox
+	align-items: center
+	align-content: center
+	justify-content: center
+	padding: 30px 15px
+	display: none
+	+media-breakpoint-down(lg)
+	.subscribe
+		width: 100%
+		max-width: 500px
+		.module-title
+			color: $blue
+			text-align: center
+			+fs(18rem)
+			font-weight: 600
+			text-transform: uppercase
+			margin-bottom: 10px
+		.subscribefrm
+			+flexbox
+			width: 100%
+			input
+				+fs(16rem)
+				border: none
+				padding: 8px 15px
+				background: $white
+				font-family: 'barlow'
+				width: 100%
+			button.subscribebutton
+				+fs(16rem)
+				white-space: nowrap
+				font-weight: 500
+				color: $white
+				background: $red
+				padding: 0px 20px
+				&::after
+					content: '\f1d8'
+					margin-left: 5px
+				&:hover
+					background: darken($red, 20%)
+
+footer
+	background: #e3eaf2 url(../img/ftbg.jpg) bottom no-repeat
+	background-size: 1000px auto
+	+media-breakpoint-down(lg)
+		background-size: 60% auto
+	+media-breakpoint-down(md)
+		background-size: 100% auto
+	.footer-main
+		padding: 50px 0 150px
+		text-align: center
+		+media-breakpoint-down(lg)
+			padding: 30px 0 100px
+		+media-breakpoint-down(md)
+			padding: 30px 0 120px
+		+media-breakpoint-down(sm)
+			padding: 30px 0px 70px
+	.footer-contact
+		color: $blue
+		+fs(15rem)
+		line-height: 1.8
+		a
+			opacity: 0.7
+			font-weight: 500
+			&:hover
+				opacity: 1
+				color: $red
+		.stats
+			color: darken($white, 40%)

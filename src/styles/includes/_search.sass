@@ -1,0 +1,58 @@
+.search-page
+	margin: 40px auto
+	max-width: 600px
+	.search-page-top
+		+flexbox
+		flex-direction: column
+		align-content: center
+		justify-content: center
+		.page-header
+			display: none
+		.searchresultsummary
+			color: darken($white, 60%)
+			margin-bottom: 5px
+		.searchcontrols
+			.form-inline
+				+pos(rel,null)
+				.form-group
+					width: 100%
+					.form-control
+						width: 100%
+						padding-right: 100px
+				.seachpage-btn
+					+pos(abs, 2px 2px null null)
+					z-index: 5
+					padding: 4px 15px
+					background: $blue
+					color: $white
+					font-weight: 500
+					&:focus
+						box-shadow: none
+	.text-danger
+		@extend .alert
+		@extend .alert-danger
+		padding: 0.375rem 0.75rem
+		&::before
+			content: '\f071'
+	.modulepager
+		display: none
+.searchresultlist
+	margin-top: 15px
+	+bor-rad(5px)
+	border: 1px solid darken($white, 5%)
+	box-shadow: 0px 3px 5px color-rgba($black,0.05)
+	.searchresult
+		+ .searchresult
+			border-top: 1px solid darken($white, 5%)
+		a
+			display: block
+			padding: 15px 20px
+			&:hover
+				color: $blue
+				background: color-rgba($black,0.02)
+	h3
+	hr
+		display: none
+	+ .modulepager
+		display: block
+		margin: 40px 0

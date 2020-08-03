@@ -1,0 +1,113 @@
+// FANCYBOX
+#__bs_notify__
+	top: 50% !important
+	left: 50% !important
+	right: unset !important
+	bottom: unset !important
+	+transform(translateX(-50%)translateY(-50%))
+	+bor-rad(5px)
+.alert
+	display: block
+	margin: 10px 0
+/*Register Form*/
+.subscribe
+	.alert-success
+		font-size: 0.875rem
+		line-height: 1.275rem
+		font-style: italic
+		display: block
+		width: 100%
+		text-align: center
+		color: $red
+		+fs(18rem)
+		border: none
+		background-color: rgba(255, 255, 255, 0.8)
+		padding: 10px
+		margin: 0
+		border-radius: 0
+.subscribefrm
+	position: relative
+	.fa-exclamation-triangle
+		color: red
+		+fs(0rem)
+		display: block
+		position: absolute
+		top: 18px
+		left: 10px
+		text-align: center
+		&:before
+			content: '\f071'
+			+fs(16rem)
+			line-height: 1
+
+.hidden
+	display: none
+	
+.share
+	+flexbox
+	align-items: center
+	align-content: center
+	> div
+		+ div
+			margin-left: 10px
+	.google
+		iframe
+			margin-top: -2px
+	.tweet
+		iframe
+			margin-top: 2px
+
+// **********SEARCH-PAGE**********
+
+
+// SEARCH SUGGEST
+#map 
+	iframe
+		pointer-events: none
+		&.active
+			pointer-events: all
+
+// form
+input[type="reset"]
+	display: none
+
+// Pagination
+.product-detail-page, .news-detail-page, .project-detail-page
+	.pages
+		display: none
+
+.pages, .modulepager
+	margin: -30px 0px 40px
+	ul.pagination
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		li
+			display: block
+			+ li
+				margin-left: 5px
+			a,span
+				+flexbox
+				width: 36px
+				height: 36px
+				justify-content: center
+				align-items: center
+				align-content: center
+				color: $main
+				+bor-rad(3px)
+				border: 1px solid darken($white,10%)
+				+fs(14rem)
+				font-weight: 500
+				+media-breakpoint-down(sm)
+					+fs(14rem)
+					width: 30px
+					height: 30px
+			&:hover
+				a,span
+					color: $blue
+			&.active
+				a,span
+					background: $red
+					color: $white
+					border-color: $red

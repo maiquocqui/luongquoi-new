@@ -1,0 +1,77 @@
+.breadcrumb-wrap
+	+pos(rel,null)
+	height: 300px
+	+flexbox
+	align-items: center
+	align-content: center
+	justify-content: center
+	flex-direction: column
+	text-shadow: 0px 3px 5px color-rgba($black,0.3)
+	+media-breakpoint-down(md)
+		height: 250px
+	+media-breakpoint-down(sm)
+		height: 150px
+	.breadcrumb-bg
+		+pos(abs,0 null 0 0)
+		right: 0
+		&:before
+			content: ''
+			display: block
+			+pos(abs, 0 null 0 0)
+			right: 0
+			background: color-rgba($black,0.1)
+	.page-name
+		+fs(32rem)
+		color: $white
+		font-weight: 600
+		text-transform: uppercase
+		+pos(rel,null)
+		z-index: 5
+		margin-bottom: 15px
+		+media-breakpoint-down(md)
+			+fs(28rem)
+		+media-breakpoint-down(sm)
+			+fs(22rem)
+		&::after
+			content: ''
+			display: block
+			width: 60px
+			height: 3px
+			margin-top: 5px
+			background: $red
+	.breadcrumb
+		color: $white
+		+pos(rel,null)
+		z-index: 5
+		margin: 0
+		padding: 0
+		background: none
+		+flexbox
+		flex-wrap: wrap
+		align-items: center
+		align-content: center
+		li
+			+flexbox
+			flex-wrap: wrap
+			align-items: center
+			align-content: center
+			+fs(14rem)
+			+media-breakpoint-down(sm)
+				+fs(13rem)
+			&:first-child
+				+fs(0)
+				a
+					&:before
+						content: '\f015'
+						+fs(16rem)
+						line-height: 1
+						+media-breakpoint-down(sm)
+							+fs(13rem)
+			a
+				display: block
+				&:hover
+					text-decoration: underline
+			+ li
+				&:before
+					content: '\f105'
+					margin: 0px 15px

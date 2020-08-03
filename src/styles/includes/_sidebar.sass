@@ -1,0 +1,84 @@
+.sidebar
+	margin-top: 40px
+	margin-bottom: 40px
+	background: color-rgba($blue,0.1)
+	padding: 10px
+	+media-breakpoint-down(md)
+		margin-bottom: 0
+	.sidebar-title
+		+fs(18rem)
+		font-weight: 600
+		margin-bottom: 10px
+	ul.sidebar-link
+		background: $white
+		> li
+			+ li
+				border-top: 1px dashed darken($white,10% )
+			> a
+				display: block
+				+fs(15rem)
+				font-weight: 500
+				padding: 8px 15px
+				border-left: 4px solid transparent
+			&.has-sub
+				+pos(rel,null)
+				.btn-showsub
+					+pos(abs, 6px 5px null null)
+					width: 30px
+					text-align: center
+					cursor: pointer
+					&::before
+						content: '\f107'
+					&.active
+						&::before
+							content: '\f106'
+				.sub
+					border-top: 1px dashed darken($white, 10%)
+					padding: 10px 25px
+					display: none
+					ul
+						li
+							// + li
+							// 	border-top: 1px dashed darken($white, 10%)
+							a
+								display: block
+								+fs(15rem)
+								font-weight: 500
+								color: darken($white, 50%)
+								padding: 3px 0
+								&::before
+									content: '\f105'
+									font-weight: bold
+									opacity: 0.5
+									margin-right: 10px
+							&:hover
+								a
+									color: $blue
+									&::before
+										color: $red
+										opacity: 1
+							&.active
+								a
+									color: $blue
+									font-weight: 600
+									&::before
+										color: $red
+										opacity: 1
+			&:hover
+				> a
+					color: $blue
+					background: color-rgba($black,0.02)
+			&.active
+				> a
+					border-left: 4px solid $red
+					color: $blue
+					background: $white
+					font-weight: 600
+				.btn-showsub
+					&::before
+						content: '\f106'
+					&.active
+						&::before
+							content: '\f107'
+				.sub
+					display: block

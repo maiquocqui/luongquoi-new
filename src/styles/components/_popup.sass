@@ -1,0 +1,135 @@
+.page-popup
+	&.open
+		opacity: 1
+		visibility: visible
+		.popup-dialog
+			+transform(translateY(0%))
+	.popup-overlay
+		+pos(fix, 0 null 0 0)
+		right: 0
+		z-index: 1000
+		background: color-rgba($black,0.5)
+		display: none
+	.popup-dialog
+		width: 100%
+		background: $white 
+		+bor-rad(0)
+		// height: 100vh
+		padding: 0
+		+pos(fix, null 0 0 0)
+		z-index: 1100
+		+transform(translateY(100%))
+		+transition(all,0.5s)
+		+media-breakpoint-down(md)
+			top: 0
+		.popup-header
+			// border-bottom: 1px solid darken($white,10%)
+			min-height: 50px
+			+flexbox
+			align-items: center
+			align-content: center
+			padding: 0px 15px
+			.popup-title
+				width: calc(100% - 40px)
+				+fs(16rem)
+				font-weight: 700
+				text-transform: uppercase
+			.close-popup
+				margin-right: 15px
+				.material-icons
+					height: 50px
+					+flexbox
+					align-items: center
+					align-content: center
+				&:hover
+					color: $red
+		.popup-body
+			max-height: calc(100vh - 50px)
+			overflow: auto
+			padding: 0px 15px
+			.product-option
+				padding: 10px 0
+				label
+					&:after
+						display: none
+			.btn-addtocart
+				display: block
+				width: 100%
+				background: $main
+				color: $white
+				+bor-rad(50px)
+				text-align: center
+				margin-bottom: 10px
+				text-transform: uppercase
+				+fs(15rem)
+				font-weight: 500
+				line-height: 40px
+				margin-top: 15px
+				+media-breakpoint-down(md)
+					order: 2
+					flex: 1
+					// width: calc(70% - 10px)
+					margin: 0
+					padding: 0
+					line-height: 36px
+					+fs(14rem)
+				&:hover
+					background: $blue
+	&.popup-detail
+		.popup-dialog
+			// min-height: 100vh
+			.popup-header
+				.popup-title
+					.nav-tabs
+						margin: 0
+						padding: 0
+						background: none
+						border: none
+						+flexbox
+						.nav-item
+							margin: 0
+							+ .nav-item
+								margin-left: 15px
+								// flex: auto
+							.nav-link
+								margin: 0
+								padding: 5px 0
+								background: none
+								border: none
+								+fs(14rem)
+								text-transform: uppercase
+								font-weight: 500
+								color: darken($white,40%)
+								&.active
+									font-weight: 700
+									color: $blue
+									border-bottom: 1px solid $blue
+					.material-icons
+						display: block
+			.popup-body
+			.tab-pane
+				padding: 0px 0px 15px
+				.content, .specification-table
+					max-height: unset
+					&.showless
+						max-height: unset !important
+						&:after
+							display: none
+	&.popup-option
+		+media-breakpoint-up(lg)
+			&.open
+				.popup-dialog
+					+transform(translate(-50%,0%))
+		.popup-overlay
+			z-index: 1400
+		.popup-dialog
+			z-index: 1500
+			+media-breakpoint-up(lg)
+				left: 50%
+				height: auto
+				max-height: 100vh
+				width: 100%
+				max-width: 550px
+				box-shadow: 0px 10px 50px color-rgba($black,0.3)
+				+transform(translate(-50%,100%))
+

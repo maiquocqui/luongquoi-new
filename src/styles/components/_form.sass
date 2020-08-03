@@ -1,0 +1,241 @@
+input,select,textarea
+	font-family: 'barlow'
+// FORM INIT
+.form-wrap
+	// .module-title
+	// 	font-weight: 500
+	// 	+fs(14rem)
+	// 	color: $blue
+	// 	text-transform: uppercase
+	// 	margin-bottom: 5px
+	.form-group
+		margin-bottom: 10px
+		+pos(rel,null)
+		.fa-exclamation-triangle
+			color: $red
+			+pos(abs,12px 10px null null)
+			+fs(0)
+			&:before
+				content: '\f071'
+				+fs(16rem)
+				color: red
+	label
+		display: block
+		+fs(14rem)
+		color: darken($white,60%)
+		// font-weight: 500
+		padding: 8px 0
+	input, select, textarea
+		+fs(14rem)
+		line-height: 1.5
+		padding: 10px 20px
+		+bor-rad(5px)
+		background: darken($white,0%)
+		// border: none
+		width: 100%
+		color: $main
+		+bor-rad(0)
+		border: 1px solid darken($white, 20%)
+		+transition(all,0.5s)
+		&::-webkit-input-placeholder
+			color: inherit
+			opacity: 0.5
+		&:active, &:focus
+			border: 1px solid lighten($blue,10%)
+			box-shadow: 0 0 0 0.2rem color-rgba($blue,0.2)
+	textarea
+		min-height: 100px
+	select
+		// padding: 9px 15px
+	.gender
+		+flexbox
+		flex-wrap: wrap
+		padding: 9px 0
+	.checkbox
+		label
+			width: 100%
+	input[type="submit"]
+		+fs(14rem)
+		display: inline-block
+		width: auto
+		border: none
+		padding: 8px 40px
+		background: $blue
+		color: $white
+		font-weight: 500
+		&:hover
+			background: $red
+.form-des
+	+fs(13rem)
+	color: darken($white,40%)
+	font-style: italic
+.form-link
+	+fs(14rem)
+	color: darken($white,40%)
+	+ .form-link
+		margin-left: 10px
+	&:hover
+		color: $blue
+		border: none
+.form-hidden
+	display: none
+	padding: 10px 0
+
+// register cms
+html 
+	body 
+		.form-wrap
+			.RadInput_Default .riTextBox, .RadInputMgr_Default
+				+fs(13rem)
+				padding: 7px 15px
+				+bor-rad(5px)
+				border: 1px solid darken($white,10%)
+				width: 100%
+				color: $main
+				height: auto !important
+				+transition(all,0.5s)
+				&::-webkit-input-placeholder
+					color: inherit
+					opacity: 0.5
+				&:active, &:focus
+					border-color: lighten($blue,10%)
+					box-shadow: 0 0 0 0.2rem color-rgba($blue,0.2)
+
+
+
+// FORM COMPONENTS
+.input-number
+	+flexbox
+	border: 1px solid darken($white,5%)
+	+bor-rad(0px)
+	background: $white
+	width: 72px
+	.btn-spin
+		width: 20px
+		height: 22px
+		+fs(14rem)
+		line-height: 22px
+		text-align: center
+		font-weight: 700
+		cursor: pointer
+	input 
+		width: 30px
+		margin: 0
+		padding: 0
+		border: none
+		line-height: 22px
+		text-align: center
+		+fs(13rem)
+		font-weight: 700
+
+.checkbox
+	input
+		display: none
+		+ label
+			color: $main
+			padding: 0 0 0 20px
+			+pos(rel,null)
+			+fs(13rem)
+			&:hover
+				color: $blue
+			&:before
+				content: ''
+				width: 14px
+				height: 14px
+				+bor-rad(3px)
+				border: 1px solid darken($white,20%)
+				+pos(abs, 2px null null 0)
+			&:after
+				content: '\f00c'
+				width: 14px
+				height: 14px
+				+bor-rad(3px)
+				color: $blue
+				line-height: 1
+				+pos(abs, 2px null null 1px)
+				z-index: 1
+				opacity: 0
+		&:checked
+			+ label
+				&:after
+					opacity: 1
+.radio
+	input
+		display: none
+		+ label
+			color: $main
+			padding: 0 0 0 20px
+			+pos(rel,null)
+			+fs(14rem)
+			&:hover
+				color: $blue
+			&:before
+				content: ''
+				width: 14px
+				height: 14px
+				+bor-rad(50px)
+				border: 1px solid darken($white,20%)
+				+pos(abs, 2px null null 0)
+			&:after
+				content: ''
+				width: 8px
+				height: 8px
+				+bor-rad(50px)
+				background: $blue
+				+pos(abs, 5px null null 3px)
+				z-index: 1
+				opacity: 0
+		&:checked
+			+ label
+				&:after
+					opacity: 1
+.file
+	input[type="file"]
+		display: none
+	label
+		&:hover
+			color: $black
+// SOCIAL LOGIN
+.social-login
+	ul
+		li 
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+			a
+				// @extend .btn-outline
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				padding: 0
+				background: none
+				padding: 7px 0
+				text-transform: capitalize
+				font-weight: 500
+				.fa
+					+fs(18rem)
+				span
+					display: block
+					line-height: 1
+					padding: 0px 10px
+					text-align: center
+				&.facebook
+					border-color: $facebook
+					color: $facebook
+					&:hover
+						background: $facebook
+						color: $white
+				&.google
+					border-color: $google
+					color: $google
+					&:hover
+						background: $google
+						color: $white
+// label
+// 	a
+// 		color: $blue
+// 		text-decoration: underline
+// 		&:hover
+// 			color: $purple
+// 			text-decoration: underline

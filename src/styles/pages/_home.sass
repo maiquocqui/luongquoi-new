@@ -1,0 +1,108 @@
+.home-title
+	+fs(16rem)
+	font-weight: 600
+	text-transform: uppercase
+	padding-bottom: 10px
+	border-bottom: 1px solid darken($white, 10%)
+	margin-bottom: 15px
+	+pos(rel,null)
+	&::before
+		content: ''
+		display: block
+		width: 60px
+		height: 3px
+		background: $red
+		z-index: 1
+		+pos(abs, null null -2px 0)
+
+.home-section
+	padding: 20px
+	height: 100%
+	border: 1px solid darken($white,10% )
+	// margin-bottom: 20px
+	.img
+		img
+			width: 100%
+	.w-auto
+		width: auto
+	.link-list
+		margin-top: 15px
+		li
+			+ li
+				border-top: 1px dashed darken($white, 10%)
+				margin-top: 10px
+				padding-top: 10px
+			a
+				display: block
+				padding-left: 25px
+				+pos(rel,null)
+				font-weight: 500
+				&::before
+					content: '\f1c1'
+					color: $red
+					+fs(18rem)
+					+pos(abs, 0 null null 0)
+				&:hover
+					color: $blue
+
+	.next-event
+		margin-top: 15px
+		li
+			+ li
+				border-top: 1px dashed darken($white,10%)
+				margin-top: 10px
+				padding-top: 10px
+			a
+				display: block
+				line-height: 1.2
+				+pos(rel,null)
+				padding-left: 20px
+				&::before
+					content: ''
+					display: block
+					width: 8px
+					height: 8px
+					+bor-rad(100px)
+					background: $blue
+					+pos(abs, 6px null null 0)
+				time
+					// color: darken($white, 60%)
+					color: $blue
+				span
+					font-weight: 500
+					&::before
+						content: ' - '
+				&:hover
+					span
+						color: $blue
+
+.home-about
+	@extend .home-section
+
+.home-chart
+	@extend .home-section
+	br
+		display: none
+	p
+		text-align: right
+		> a
+			font-style: italic
+			&::after
+				content: '\f105'
+				margin-left: 5px
+			&:hover
+				color: $red
+
+.home-event
+	@extend .home-section
+
+.home-document
+	@extend .home-section
+
+.home-gutters
+	margin: 0px -10px 20px
+	[class^="col"]
+		padding: 0px 10px
+		margin-bottom: 20px
+		> .ModuleContent
+			height: 100%

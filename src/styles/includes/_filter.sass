@@ -1,0 +1,13 @@
+.filter-block
+	background: darken($white,5% )
+	padding: 20px 0
+	.filter-wrap
+		+flexbox
+		align-items: center
+		align-content: center
+		.filter-prop
+			+ .filter-prop
+				margin-left: 10px
+		.form-control
+			+fs(14rem)
+			font-family: 'barlow'
