@@ -1,76 +1,71 @@
-//- include ../_layout/banner
+include ../_layout/banner
 
-section.breadcrumb-wrap.clearfix
-	.breadcrumb-bg(style="background: url(img/bn1.jpg) center center no-repeat;background-size:cover")
+section.home-about
 	.container
-		h3.page-name 
-		ol.breadcrumb
-			li
-				a(href="#!") Trang chủ
-			li
-				a(href="#!") Quan hệ nhà đầu tư
+		.row
+			.col-12.col-md-6.col-lg-7
+				h4.home-stitle Câu chuyện về Lương Quới 
+				h3.home-title hành trình gia tăng giá trị cho những trái dừa
+				.content
+					p Công ty TNHH chế biến dừa Lương Quới được thành lập vào năm 1997 và bắt đầu hành trình gia tăng giá trị cho trái dừa bằng những sản phẩm khác biệt như: cơm dừa nạo sấy, dầu dừa tinh khiết, dầu dừa nguyên chất, dầu dừa tinh luyện, nước cốt dừa đóng lon...
+					p Trải qua nhiều thách thức công ty TNHH Chế biến Dừa Lương Quới đang từng bước khẳng định vị trí tiên phong trong sản xuất, kinh doanh và xuất nhập khẩu các sản phẩm thực phẩm từ trái dừa, đưa thương hiệu Vietcoco trở thành niềm tin lựa chọn của khách hàng cả nước và vươn đến chinh phục thị trường quốc tế. Sản phẩm của công ty đã có  mặt hơn 30 nước trên thế giới như Mỹ, Canada, Nhật Bản, Úc, Hàn quốc…và tiếp tục mở rộng sang các thị trường mới…
+			.col-12.col-md-6.col-lg-5
+				.video
+					img(src="img/video.jpg", alt="")
 
-.container.mt-5
-	.row.home-gutters
-		.col-12.col-lg-4
-			section.home-about
-				.home-title Giới thiệu
-				.img
-					img(src="img/hc.jpg", alt="")
-				.caption
-					ul.link-list
-						li
-							a(href="#!") Giới thiệu doanh nghiệp
-		.col-12.col-lg-8
-			section.home-chart
-				.home-title Thông tin cổ phiếu
-				.text-center
-					img(src="img/hchart.jpg", alt="")
-		.col-12.col-lg-4
-			section.home-event
-				.home-title Lịch sự kiện
-				.img
-					img(src="img/he.jpg", alt="")
-				.caption
-					ul.next-event
-						li
-							a(href="#!") 
-								time 25-05-2020
-								span Lorem ipsum dolor sit amet.
-						li
-							a(href="#!") 
-								time 30-05-2020
-								span Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, sed!
-						li
-							a(href="#!") 
-								time 01-06-2020
-								span Lorem ipsum dolor sit amet consectetur adipisicing elit.
+section.home-cate
+	.row.no-gutters.align-items-center
+		.col-12.col-md-6.col-lg-7
+			.block-img
+				img(src="img/hc1.jpg", alt="")
+		.col-12.col-md-6.col-lg-5
+			.block-content
+				h3.home-title Thực phẩm
+				.content
+					p Hương thơm tự nhiên và đầy đủ chất dinh dưỡng tốt cho sức khỏe, ko chứa gluten, không biến đổi gen, không chất bảo quản.
+					p Người bạn đồng hành tuyệt vời cho hành trình chăm sóc gia đình qua từng bữa ăn thơm ngon mà vẫn tốt cho sức khỏe.
+				.ct-action
+					a.bt-primary(href="#!") Xem tất cả
+					
+section.home-cate
+	.row.no-gutters.align-items-center
+		.col-12.col-md-6.col-lg-5
+			.block-content
+				h3.home-title Nước giải khát
+				.content
+					p Đảm bảo nguồn nguyên liệu dừa tươi nguyên chất không biến đuổi gen, không sử dụng chất bảo quản. Giữ lại tối đa hương vị và giá trị dinh dưỡng sản phẩm. 
+					p Tốt cho sức khỏe, hỗ trợ hệ miễn dịch, giảm huyết áp, giúp tim mạch hoạt động khỏe mạnh.
+				.ct-action
+					a.bt-primary(href="#!") Xem tất cả
+		.col-12.col-md-6.col-lg-7
+			.block-img
+				img(src="img/hc2.jpg", alt="")
 
-		.col-12.col-lg-4
-			section.home-event
-				.home-title Báo cáo mới nhất
-				.img
-					img(src="img/hr.jpg", alt="")
-				.caption
-					ul.link-list
-						li
-							a(href="#!") Báo cáo tài chính Q1/2020
-						li
-							a(href="#!") Báo cáo kết quả kinh doanh đầu năm 2020
-						//- li
-							a(href="#!") Báo cáo cuộc họp hội đồng quản trị Q1/2020
-						li
-							a(href="#!") Báo cáo thường niên năm 2019
-		.col-12.col-lg-4
-			section.home-document
-				.home-title Công bố thông tin mới nhất
-				.img
-					img(src="img/ho.jpg", alt="")
-				.caption
-					ul.link-list
-						li
-							a(href="#!") Bản tin nhà đầu tư
-						li
-							a(href="#!") Tài liệu thuyết trình
-						li
-							a(href="#!") Điều lệ - Quy chế
+
+section.home-cate
+	.row.no-gutters.align-items-center
+		.col-12.col-md-6.col-lg-7
+			.block-img
+				img(src="img/hc3.jpg", alt="")
+		.col-12.col-md-6.col-lg-5
+			.block-content
+				h3.home-title Mỹ phẩm
+				.content
+					p Được sản xuất từ những trái dừa già (10-12 tháng) qua chọn lọc cẩn thận, có chất lượng ổn định. Hương thơm dịu nhẹ tự nhiên từ dừa
+					p Làm đẹp mi, môi, móng và dưỡng da tay, chân, dưỡng da và chống lão hóa, chăm sóc tóc bóng mượt, massage thư giãn và chăm sóc cơ thể.
+				.ct-action
+					a.bt-primary(href="#!") Xem tất cả
+					
+section.home-cate
+	.row.no-gutters.align-items-center
+		.col-12.col-md-6.col-lg-5
+			.block-content
+				h3.home-title sản phẩm khác
+				.content
+					p DÙng làm nguyên liệu để sản xuất các ứng dụng trong công nghiệp hóa chất, xà phòng, nhiêu liệu sinh học hay chất tẩy rửa...
+					p Ngoài ra  còn là nguyên liệu được dùng làm thức ăn cho các loài gia súc, gia cầm, thủy cầm.
+				.ct-action
+					a.bt-primary(href="#!") Xem tất cả
+		.col-12.col-md-6.col-lg-7
+			.block-img
+				img(src="img/hc4.jpg", alt="")

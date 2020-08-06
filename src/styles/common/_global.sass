@@ -1,23 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=latin-ext,vietnamese')
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500;600;700;800&display=swap')
+
+@font-face 
+	font-family: 'cooper';
+	src: url(../fonts/cooperblack.ttf);
+
+@font-face 
+	font-family: 'cooperitalic';
+	src: url(../fonts/cooperblackitalic.ttf);
+
 
 body
-	font-family: 'Barlow', sans-serif
+	font-family: 'Baloo Paaji 2', cursive
 	font-size: 16px
 	line-height: 1.5
 	color: $main
-	// background: darken($white,3%)
+	background: url(../img/bg.jpg) top center repeat
 	*
 		line-height: inherit
 html
 	overflow: auto
-
-// .fontB
-// 	font-family: 'Barlow', sans-serif
-// .fontP
-// 	font-family: 'Prompt', sans-serif
-
-.title
-.s-title
 
 hr
 	background: darken($white,10%)
@@ -41,7 +42,7 @@ main
 .container
 	+pos(static,unset)
 	+media-breakpoint-up(xl)
-		max-width: 1180px
+		max-width: 1170px
 		width: 100%
 	+media-breakpoint-down(lg)
 		max-width: 100%
@@ -58,10 +59,10 @@ main
 .content
 	color: $main
 	// font-family: 'Montserrat', sans-serif
-	+fs(18rem)
+	+fs(16rem)
 	line-height: 1.3
 	+media-breakpoint-down(md)
-		+fs(16rem)
+		+fs(15rem)
 	+media-breakpoint-down(sm)
 		+fs(14rem)
 	.row
@@ -211,7 +212,7 @@ main
 					color: $white
 					border: 2px solid $white
 					box-shadow: 2px 2px 1px color-rgba($black,0.1)
-					// +pos(abs, -15px null null -60px)
+				// +pos(abs, -15px null null -60px)
 					margin-right: 10px
 				p
 					width: calc(100% - 60px)
