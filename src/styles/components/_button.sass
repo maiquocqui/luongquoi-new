@@ -1,13 +1,12 @@
 .bn-button
-	+flexbox
-	align-items: center
-	justify-content: center
-	height: 45px
-	padding: 0px 40px
+	display: block
+	padding: 13px 40px
 	color: $white
 	+fs(15rem)
+	line-height: 20px
 	font-weight: 700
 	+bor-rad(100px)
+	text-align: center
 	text-transform: uppercase
 .bt-primary
 	@extend .bn-button
@@ -17,7 +16,19 @@
 		color: $white
 .bt-outline
 	@extend .bn-button
+	padding: 10px 40px
 	border: 3px solid $blue
 	&:hover
 		background: $blue
 		color: $white
+	&.sm
+		+fs(15rem)
+		border-width: 1px
+.bt-outline2
+	@extend .bt-outline
+	color: $blue
+
+.btn-wrap
+	+flexbox
+	align-items: center
+	align-content: center

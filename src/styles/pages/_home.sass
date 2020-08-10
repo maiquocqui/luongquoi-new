@@ -18,9 +18,22 @@
 		height: 16px
 		margin-top: 10px
 		background: url(../img/line.png) center no-repeat
+	&.sm
+		+fs(22rem)
+	&.text-center
+		&::after
+			content: ''
+			width: 100%
+			background: url(../img/line2.png) center no-repeat
 
 .home-section
 	padding: 40px 0
+	+pos(rel,null)
+	.bg
+		+pos(abs, 0 null 0 0)
+		right: 0
+		z-index: -1
+		filter: brightness(60%)
 
 .home-about
 	@extend .home-section
@@ -60,7 +73,7 @@
 		max-width: 460px
 		padding: 0px 30px
 	.bt-primary
-		display: inline-flex
+		display: inline-block
 		width: 300px
 		&:after
 			content: '\e87a'
@@ -68,3 +81,196 @@
 			vertical-align: top
 			font-family: 'Linearicons-Free'
 			margin-left: 10px
+
+.home-sale
+	background: #1f4284
+	.block-img
+		padding: 25px 0
+	.block-content
+		color: $white
+		.title
+			+fs(34rem)
+			font-weight: 700
+			text-transform: uppercase
+		.s-title
+			+fs(34rem)
+			margin-bottom: 15px
+		.btn-actions
+			+flexbox
+			align-items: center
+			.bt-primary
+				background: #163572
+				+ .bt-primary
+					margin-left: 30px
+				&::after
+					content: '\e876'
+					font-family: 'linearicons-free'
+					font-size: 60%
+					margin-left: 10px
+				&:hover
+					background: $lblue
+
+.home-special
+	@extend .home-section
+	.block-content
+		max-width: 1060px
+		margin: 0 auto
+	.features
+		.feature
+			text-align: center
+			.caption
+				color: $white
+				height: 80px
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				flex-direction: column
+				.number
+					+fs(33rem)
+					font-weight: 600
+					line-height: 1.2
+					strong
+						+fs(48rem)
+						font-weight: 600
+					span
+						+fs(24rem)
+						font-weight: 500
+				.desc
+					+fs(16rem)
+	
+.home-news
+	@extend .home-section
+	.news-list
+		.news
+			margin-bottom: 15px
+			.img
+				display: block
+				margin-bottom: 10px
+				img
+					width: 100%
+			.caption
+				time
+					display: block
+					+fs(14rem)
+					color: darken($white,30)
+					margin-bottom: 5px
+					&:before
+						content: '\e836'
+						font-family: 'linearicons-free'
+						margin-right: 10px
+				.name
+					margin-bottom: 5px
+					a
+						display: block
+						+fs(16rem)
+						line-height: 1.3
+						// font-weight: 600
+						color: $main
+						overflow: hidden
+						display: -webkit-box
+						-webkit-line-clamp: 2
+						-webkit-box-orient: vertical
+						&:hover
+							color: $lblue
+				.des
+					+fs(16rem)
+					overflow: hidden
+					display: -webkit-box
+					-webkit-line-clamp: 2
+					-webkit-box-orient: vertical
+					margin-bottom: 5px
+				.link
+					+fs(13rem)
+					color: $blue
+					&::after
+						content: '\e876'
+						font-family: 'linearicons-free'
+						font-size: 80%
+						margin-left: 5px
+					&:hover
+						color: $lblue
+			&.big
+				.img
+					margin-bottom: 20px
+				.caption
+					.name
+						a
+							+fs(20rem)
+							font-weight: 600
+
+.home-brand
+	@extend .home-section
+	.bg
+		filter: brightness(100%)
+	.block-content
+		max-width: 960px
+		margin: 0 auto 30px
+	.brands
+		+flexbox
+		justify-content: center
+		align-items: center
+		.brand
+			+flexbox
+			width: 200px
+			height: 150px
+			align-items: center
+			align-content: center
+			justify-content: center
+			background: $white
+			+ .brand
+				margin-left: 30px
+			img
+				max-width: 80%
+				max-height: 80%
+
+.home-cert
+	@extend .home-section
+	.cert-slide
+		+pos(rel,null)
+		margin: 0px -15px
+		.slick-arrow
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			+fs(0)
+			&::before
+				content: ''
+				+fs(16rem)
+				width: 30px
+				height: 30px
+				+flexbox()
+				align-items: center
+				align-content: center
+				justify-content: center
+				color: $white
+				+bor-rad(100%)
+				background: color-rgba($black,0.3)
+			&:hover
+				&::before
+					background: $blue
+			&.slick-prev
+				left: -30px
+				&::before
+					content: '\f104'
+			&.slick-next
+				right: -30px
+				&::before
+					content: '\f105'
+		.item
+			padding: 0px 15px
+			.cert
+				+flexbox
+				height: 165px
+				justify-content: center
+				align-items: center
+				align-content: center
+				+bor-rad(5px)
+				background: $white
+				border: 1px solid darken($white,20%)
+				img
+					max-width: 80%
+					max-height: 80%
+
+.home-career
+	@extend .home-section
+	margin-bottom: 60px

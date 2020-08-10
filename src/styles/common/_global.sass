@@ -52,7 +52,7 @@ main
 
 .container-fluid
 	+media-breakpoint-up(xl)
-		max-width: 1480px
+		max-width: 1400px
 		width: 100%
 
 
@@ -79,24 +79,23 @@ main
 		+media-breakpoint-down(sm)
 			+fs(18rem)
 	.quote
-		background: #f0fbff
-		+bor-rad(10px)
-		padding: 15px 30px 30px
-		margin: 15px 0
+		+fs(20rem)
+		max-width: 800px
+		margin: 15px auto
+		padding: 20px 20px 20px 50px
 		+pos(rel,null)
 		&:before
 			content: '\f10d'
 			display: block
-			+fs(28rem)
-			color: #27a8e0
-			margin-bottom: 5px
-			margin-left: -10px
+			+fs(36rem)
+			color: $main
+			+pos(abs, 0 null null 0)
 		&:after
 			content: '\f10e'
 			display: block
 			+fs(28rem)
-			color: #27a8e0
-			+pos(abs, null 15px 10px null)
+			color: $main
+			+pos(abs, null 0 10px null)
 		.author
 			font-weight: 700
 			&:before
