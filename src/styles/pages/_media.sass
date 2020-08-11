@@ -1,0 +1,93 @@
+.picture-nav
+	margin-bottom: 30px
+	ul
+		+flexbox
+		align-items: flex-end
+		align-content: flex-end
+		justify-content: center
+		background: url
+		min-width: 632px
+		margin: 0 auto
+		background: url(../img/nav.png) center bottom no-repeat
+		// border-bottom: 1px solid darken($white,10% )
+		li
+			+ li
+				margin-left: 10px
+			a
+				display: block
+				padding: 8px 20px
+				+fs(16rem)
+				+bor-rad(5px 5px 0 0)
+				background: $white
+				border: 1px solid darken($white, 10%)
+				// border-bottom: none
+			&:hover
+				a
+					color: $blue
+			&.active
+				a
+					color: $white
+					border-color: #30588e
+					background: url(../img/navac.png) center center no-repeat
+					background-size: 100% 100%
+
+.media-page
+	padding: 50px 0
+
+	.album-list
+		.album
+			margin-bottom: 20px
+			.img
+				display: block
+				+pos(rel,null)
+				&::before
+					content: ''
+					display: block
+					background: color-rgba($blue,0.7) url(../img/view.png) center center no-repeat
+					+pos(abs, 0 null 0 0)
+					right: 0
+					z-index: 1
+					opacity: 0
+					+transition(all,0.3s)
+			.caption
+				.name
+					text-align: center
+					padding: 10px 0
+					a
+						&:hover
+							color: $blue
+			&:hover
+				.img
+					&::before
+						opacity: 1
+	
+	.video-list
+		.video
+			margin-bottom: 20px
+			.img
+				display: block
+				+pos(rel,null)
+				&::before
+					content: ''
+					display: block
+					background: color-rgba($black,0.4) url(../img/viewv.png) center center no-repeat
+					+pos(abs, 0 null 0 0)
+					right: 0
+					z-index: 1
+					+transition(all,0.3s)
+			.caption
+				.name
+					text-align: center
+					padding: 10px 0
+					a
+						&:hover
+							color: $blue
+			&:hover
+				.img
+					&::before
+						background: color-rgba($black,0) url(../img/viewv.png) center center no-repeat
+	
+	.bt-load
+		&::after
+			content: '\f0d7'
+			margin-left: 10px

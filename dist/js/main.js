@@ -84,6 +84,14 @@ $(document).ready(function () {
         dots: false,
         infinite: false
     });
+
+    $('.news-slide').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true
+
+    });
 });
 
 var responsive = function responsive() {
