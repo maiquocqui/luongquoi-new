@@ -96,6 +96,13 @@ $(document).ready(function() {
         dots:true,
         
     })
+
+    $('.vnl-slide').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+    })
 });
 
 var responsive = function() {
