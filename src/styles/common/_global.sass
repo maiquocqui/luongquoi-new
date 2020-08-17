@@ -82,22 +82,26 @@ main
 		margin-bottom: 15px
 	.quote
 		+fs(20rem)
-		max-width: 800px
 		margin: 15px auto
 		padding: 20px 20px 20px 50px
 		+pos(rel,null)
 		&:before
-			content: '\f10d'
-			display: block
-			+fs(36rem)
-			color: $main
-			+pos(abs, 0 null null 0)
+			content: ''
+			display: inline-block
+			margin-right: 10px
+			background: url(../img/ql3.png)
+			width: 37px
+			height: 32px
+			// +pos(abs, 0 null null 0)
 		&:after
-			content: '\f10e'
-			display: block
-			+fs(28rem)
-			color: $main
-			+pos(abs, null 0 10px null)
+			content: ''
+			display: inline-block
+			margin-left: 10px
+			vertical-align: bottom
+			width: 26px
+			height: 23px
+			background: url(../img/qr3.png)
+			// +pos(abs, null 0 10px null)
 		.author
 			font-weight: 700
 			&:before

@@ -6,7 +6,7 @@
 	
 .vnl-slide
 	.slick-arrow
-		+pos(abs, 50% null null null)
+		+pos(abs, -55px 0 null null)
 		+transform(translateY(-50%))
 		+fs(0)
 		&::before
@@ -19,16 +19,21 @@
 			align-content: center
 			justify-content: center
 			color: $white
-			+bor-rad(3px)
-			background: color-rgba($black,0.3)
+			+bor-rad(5px)
+			background: $blue
 		&:hover
 			&::before
-				background: $blue
+				background: $lblue
 		&.slick-prev
-			left: -30px
+			right: 50px
 			&::before
 				content: '\f104'
 		&.slick-next
-			right: -30px
 			&::before
 				content: '\f105'
+	.logo
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		height: 130px

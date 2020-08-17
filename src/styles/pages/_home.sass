@@ -20,6 +20,11 @@
 		background: url(../img/line.png) center no-repeat
 	&.sm
 		+fs(22rem)
+	&.text-right
+		&::after
+			width: 100%
+			background-position: left top
+			+transform(scale(-1,1))
 	&.text-center
 		&::after
 			content: ''

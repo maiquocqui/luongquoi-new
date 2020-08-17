@@ -178,52 +178,6 @@
 				.cert
 					height: 380px
 	
-	.location-list
-		.location
-			+pos(rel,null)
-			overflow: hidden
-			margin-bottom: 30px
-			.img
-				display: block
-				&:before
-					content: ''
-					+pos(abs, 0 null 0 0)
-					right: 0
-					background: linear-gradient(color-rgba($black,0),color-rgba($black,1))
-					z-index: 1
-				img
-					width: 100%
-					+transition(all,0.5s)
-			.caption
-				+pos(abs, null 0 0 0)
-				z-index: 2
-				padding: 15px 20px
-				.name
-					+fs(20rem)
-					color: $white
-					line-height: 1.3
-					font-weight: 700
-					text-transform: uppercase
-				ul
-					li
-						+pos(rel,null)
-						+fs(14rem)
-						font-weight: normal
-						line-height: 1.3
-						color: $white
-						padding-left: 30px
-						.icon
-							+pos(abs, 0 null null 0)
-							img
-								width: 18px
-						a
-							color: $white
-							&:hover
-								color: $lblue
-			&:hover
-				.img
-					img
-						+transform(scale3d(1.1,1.1,1))
 
 	.qt-quote
 		max-width: 1140px
@@ -285,3 +239,65 @@
 					height: 16px
 					margin: 0 0 10px
 					background: url(../img/line2.png) center no-repeat
+
+
+.location-list
+	.location
+		+pos(rel,null)
+		margin-bottom: 30px
+		.img
+			display: block
+			+bor-rad(5px)
+			overflow: hidden
+			+pos(rel,null)
+			&:before
+				content: ''
+				+pos(abs, 0 null 0 0)
+				right: 0
+				background: linear-gradient(color-rgba($black,0),color-rgba($black,1))
+				z-index: 1
+			img
+				width: 100%
+				+transition(all,0.5s)
+		.caption
+			+pos(abs, null 0 0 0)
+			z-index: 2
+			padding: 15px 20px
+			.name
+				+fs(20rem)
+				color: $white
+				line-height: 1.3
+				font-weight: 700
+				text-transform: uppercase
+			ul
+				li
+					+pos(rel,null)
+					+fs(14rem)
+					font-weight: normal
+					line-height: 1.3
+					color: $white
+					padding-left: 30px
+					.icon
+						+pos(abs, 0 null null 0)
+						img
+							width: 18px
+					a
+						color: $white
+						&:hover
+							color: $lblue
+		&:hover
+			.img
+				img
+						+transform(scale3d(1.1,1.1,1))
+		&.active
+			&::before
+				content: ''
+				display: block
+				width: 0
+				height: 0
+				border: 10px solid transparent
+				border-top-color: none
+				border-bottom-color: #e2e2e2
+				z-index: 1
+				+pos(abs, null null -30px 50%)
+				+transform(translateX(-50%))

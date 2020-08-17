@@ -26,22 +26,20 @@ input,select,textarea
 		// font-weight: 500
 		padding: 8px 0
 	input, select, textarea
-		+fs(14rem)
+		+fs(16rem)
+		font-family: 'Baloo Paaji 2', cursive
 		line-height: 1.5
 		padding: 10px 20px
 		+bor-rad(5px)
-		background: darken($white,0%)
-		// border: none
+		background: #f2f3f5
+		border: none
 		width: 100%
 		color: $main
-		+bor-rad(0)
-		border: 1px solid darken($white, 20%)
 		+transition(all,0.5s)
 		&::-webkit-input-placeholder
 			color: inherit
 			opacity: 0.5
 		&:active, &:focus
-			border: 1px solid lighten($blue,10%)
 			box-shadow: 0 0 0 0.2rem color-rgba($blue,0.2)
 	textarea
 		min-height: 100px
@@ -55,16 +53,17 @@ input,select,textarea
 		label
 			width: 100%
 	input[type="submit"]
-		+fs(14rem)
+		+fs(16rem)
 		display: inline-block
 		width: auto
 		border: none
-		padding: 8px 40px
-		background: $blue
+		padding: 8px 20px
+		background: $red
 		color: $white
 		font-weight: 500
+		text-transform: uppercase
 		&:hover
-			background: $red
+			background: lighten($red,10% )
 .form-des
 	+fs(13rem)
 	color: darken($white,40%)

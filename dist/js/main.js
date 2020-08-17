@@ -90,7 +90,6 @@ $(document).ready(function () {
         slidesToScroll: 1,
         arrows: true,
         dots: true
-
     });
 
     $('.vnl-slide').slick({
@@ -99,6 +98,27 @@ $(document).ready(function () {
         arrows: true,
         dots: false
     });
+
+    $('.other-slide').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false
+    });
+
+    if ($('.contact-page').length > 0) {
+        $('.location').click(function () {
+            if (!$(this).hasClass('active')) {
+                $('.location').removeClass('active');
+                var logTarget = $(this).attr('data-target');
+                $('.log-map').removeClass('active');
+                // setTimeout(() => {
+                $(this).addClass('active');
+                document.getElementById(logTarget).classList.add('active');
+                // });
+            }
+        });
+    }
 });
 
 var responsive = function responsive() {
