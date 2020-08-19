@@ -1,5 +1,7 @@
 body
 	padding-top: 60px
+	+media-breakpoint-down(lg)
+		padding-top: 50px
 
 header
 	background: $blue
@@ -22,21 +24,79 @@ header
 		align-content: center
 		justify-content: center
 		height: 60px
+		+media-breakpoint-down(lg)
+			height: 50px
 		a
 			display: block
 			img
 				height: 40px
+				+media-breakpoint-down(lg)
+					height: 30px
+	.btn-showmenu
+		display: none
+		width: 20px
+		height: 15px
+		+pos(rel,null)
+		&::before
+			content: ''
+			display: block
+			width: 100%
+			height: 1px
+			background: $white
+			+pos(abs, 0 0 null 0)
+			+transition(all,0.5s)
+		&::after
+			content: ''
+			display: block
+			width: 100%
+			height: 1px
+			background: $white
+			+pos(abs, null 0 0 0)
+			+transition(all,0.5s)
+		span
+			display: block
+			width: 100%
+			height: 1px
+			background: $white
+			+transition(all,0.5s)
+		&.active
+			&::before
+				top: 50%
+				+transform(translateY(-50%)rotateZ(45deg))
+			&::after
+				bottom: 50%
+				+transform(translateY(50%)rotateZ(-45deg))
+			span
+				opacity: 0
+				visibility: hidden
+
+		+media-breakpoint-down(lg)
+			+flexbox
+			align-items: center
+			align-content: center
 
 	.menu
+		+media-breakpoint-down(lg)
+			+pos(fix, 50px 0 0 0)
+			background: $white
+			z-index: 1000
+			display: none
 		.menu-link
 			+flexbox
 			align-items: center
 			align-content: center
+			+media-breakpoint-down(lg)
+				display: block
+				padding: 0px 40px
 			> li
 				+flexbox
 				align-items: center
 				align-content: center
 				height: 60px
+				+media-breakpoint-down(lg)
+					height: unset
+					display: block
+					border-bottom: 1px solid darken($white, 10%)
 				+ li
 					> a
 						&:before
@@ -56,6 +116,9 @@ header
 					text-transform: uppercase
 					padding: 0px 15px
 					+pos(rel,null)
+					+media-breakpoint-down(lg)
+						color: $main
+						padding: 10px 0
 				.sub
 					display: none
 					+pos(fix, 60px 0 null 0)
@@ -96,13 +159,16 @@ header
 							width: calc(100% - 330px)
 				&:hover
 					background: $lblue
-					.sub
-						display: block
+					+media-breakpoint-up(xl)
+						.sub
+							display: block
 	
 	.language
 		+flexbox
 		align-items: center
 		align-content: center
+		+media-breakpoint-down(lg)
+			padding: 15px 40px
 		a
 			+fs(13rem)
 			font-weight: 500
@@ -114,11 +180,22 @@ header
 					margin: 0px 5px
 			&.active
 				color: $white
+				+media-breakpoint-down(lg)
+					color: $blue
+					font-weight: 700
 	
 	.search
 		margin-left: 15px
 		.search-toggle
 			color: $white
 			+fs(16rem)
+			+media-breakpoint-down(lg)
+				// +fs(18rem)
+				+flexbox
+				width: 20px
+				height: 16px
+				align-items: center
+				align-content: center
+				justify-content: center
 
 

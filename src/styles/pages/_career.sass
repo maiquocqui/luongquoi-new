@@ -1,0 +1,72 @@
+.career-page
+	padding: 50px 0
+
+.job-list
+	.job-item
+		background: $white
+		border: 1px solid darken($white, 10%)
+		border-left-width: 3px
+		margin-bottom: 30px
+		&.active
+			border-left-color: $blue
+		.detail
+			padding: 0px 30px
+			.name
+				+fs(22rem)
+				line-height: 1.3
+				color: $blue
+				font-weight: 600
+				text-transform: uppercase
+				padding: 10px 0
+				margin-top: 5px
+				border-bottom: 1px solid darken($white,10%)
+			.des
+				padding: 15px 0
+				.content
+					max-height: 150px
+					overflow: hidden
+					margin-bottom: 10px
+					+pos(rel,null)
+					&::after
+						content: ''
+						display: block
+						width: 100%
+						height: 50px
+						background: linear-gradient(color-rgba($white,0),color-rgba($white,1))
+						+pos(abs, null 0 0 0)
+						z-index: 1
+					&.active
+						max-height: unset
+						&::after
+							display: none
+
+			.viewdetail
+				font-weight: 600
+				color: $blue
+				&::before
+					content: '+'
+					margin-right: 10px
+					font-family: 'Baloo Paaji 2', cursive
+				&:hover
+					color: $lblue
+				&.active
+					&::before
+						content: '-'
+		.info
+			height: 100%
+			border-left: 1px solid darken($white, 10%)
+			background: #f6f7f9
+			padding: 30px 40px
+			.title
+				+fs(24rem)
+				font-weight: 600
+				text-transform: uppercase
+				margin-bottom: 10px
+			ul
+				margin-bottom: 10px
+				li
+					+fs(16rem)
+			.bt-primary
+				&:after
+					content: '\f105'
+					margin-left: 10px

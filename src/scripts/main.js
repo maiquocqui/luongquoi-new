@@ -6,11 +6,13 @@ $(document).ready(function() {
     );
 
     // update mobile script
+    $('.btn-showmenu').html('<span></span>');
+
     $('.btn-showmenu').on('click', function() {
         $('.btn-showmenu').toggleClass('active');
-        $('.menu').slideToggle(200);
+        $('.menu').slideToggle(300);
         $('.search-toggle').removeClass('active');
-        $('.searchbox').slideUp(200);
+        $('.searchbox').slideUp(300);
     });
 
     $('.menu .has-sub').append("<div class='btn-showsub'></div>");
@@ -108,7 +110,31 @@ $(document).ready(function() {
         slidesToScroll: 1,
         arrows: false,
         dots: false
-    })
+    });
+
+    if ($('.career-page').length > 0) {
+        $('.job-item .viewdetail').click(function() {
+            $('.job-item').removeClass('active');
+            $('.job-item .content').removeClass('active');
+            $('.job-item .viewdetail')
+                .removeClass('active')
+                .text('Xem chi tiết');
+
+            $(this).toggleClass('active');
+            $(this)
+                .parents('.job-item')
+                .toggleClass('active');
+            $(this)
+                .parents('.job-item')
+                .find('.content')
+                .toggleClass('active');
+            if ($(this).hasClass('active')) {
+                $(this).text('Thu gọn');
+            } else {
+                $(this).text('Xem chi tiết');
+            }
+        });
+    }
 
     if ($('.contact-page').length > 0) {
         $('.location').click(function() {
@@ -126,22 +152,15 @@ $(document).ready(function() {
 });
 
 var responsive = function() {
-    // if ($(window).outerWidth() < 1200) {
-    //     if ($('.Module-172').length > 0) {
-    //         $('.search').insertAfter('.Module-172');
-    //         $('.Module-174').insertAfter('.header-main');
-    //     } else {
-    //         $('.search').insertAfter('.logo-wrap');
-    //     }
-    //     $('.top-menu ul').insertAfter('.menu-link');
-    // } else {
-    //     if ($('.Module-172').length > 0) {
-    //         $('.Module-174').insertAfter('.Module-172');
-    //     } else {
-    //     }
-    //     $('.search').appendTo('.header-top .col-right');
-    //     $('.menu .menu-link').next('ul').appendTo('.top-menu');
-    // }
+    if ($(window).outerWidth() < 1200) {
+        $('header .language').insertAfter('.menu-link');
+        $('header .search-toggle').html(
+            "<span class='lnr lnr-magnifier'></span>"
+        );
+    } else {
+        $('header .language').insertBefore('header .search');
+        $('header .search-toggle').html("<i class='fa fa-search'></i>");
+    }
 };
 
 $(window).resize(function() {
