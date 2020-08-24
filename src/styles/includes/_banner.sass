@@ -21,6 +21,9 @@
 			z-index: 2
 		img
 			width: 100%
+			+media-breakpoint-down(sm)
+				height: 280px
+				object-fit: cover
 		.caption-wrap
 			+pos(abs, 50% 0 null 0)
 			+transform(translateY(-50%))
@@ -28,6 +31,8 @@
 			color: $white
 			.caption
 				width: 600px
+				+media-breakpoint-down(sm)
+					width: 100%
 			.big
 				font-family: 'cooper'
 				+fs(51rem)
@@ -43,3 +48,20 @@
 				align-items: center
 				.bt-outline
 					margin-left: 20px
+			+media-breakpoint-down(lg)
+				.big
+					+fs(32rem)
+				.med
+					+fs(22rem)
+				.small
+					+fs(14rem)
+			+media-breakpoint-down(sm)
+				.big
+					+fs(18rem)
+					line-height: 1.5
+				.med
+					+fs(16rem)
+					line-height: 1.5
+				.small
+					+fs(13rem)
+					line-height: 1.5

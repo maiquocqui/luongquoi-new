@@ -97,6 +97,7 @@ header
 					height: unset
 					display: block
 					border-bottom: 1px solid darken($white, 10%)
+					+pos(rel,null)
 				+ li
 					> a
 						&:before
@@ -119,34 +120,69 @@ header
 					+media-breakpoint-down(lg)
 						color: $main
 						padding: 10px 0
+				.btn-showsub
+					display: none
+					+media-breakpoint-down(lg)
+						display: block
+						+pos(abs, 6px 0 null null)
+						z-index: 100
+						+transition(all,0.3s)
+						&::before
+							content: '\f107'
+							display: block
+							width: 30px
+							line-height: 30px
+							text-align: center
+							+fs(18rem)
+						&.active
+							+transform(scale(1,-1))
 				.sub
 					display: none
 					+pos(fix, 60px 0 null 0)
 					z-index: 1100
 					background: $white
 					box-shadow: 0 5px 15px color-rgba($black,0.45)
+					+media-breakpoint-down(lg)
+						+pos(static,null)
+						box-shadow: none
 					.sub-container
 						@extend .container
 						+flexbox
+						+media-breakpoint-down(lg)
+							padding: 0
 						ul
 							width: 330px
 							padding: 10px 0
 							background: #f3f3f3
 							+pos(rel,null)
+							+media-breakpoint-down(lg)
+								width: 100%
+								background: $white
+								border-top: 1px solid darken($white, 10%)
+								padding: 0
 							&:before
 								content: ''
 								display: block
 								width: 1000px
 								background: #f3f3f3
 								+pos(abs, 0 100% 0 null)
+								+media-breakpoint-down(lg)
+									display: none
 							li
 								+pos(rel,null)
+								+ li
+									+media-breakpoint-down(lg)
+										border-top: 1px dashed darken($white, 10%)
 								a
 									display: block
 									padding: 15px 15px
 									+fs(16rem)
 									line-height: 20px
 									font-weight: 500
+									+media-breakpoint-down(lg)
+										+fs(16rem)
+										padding: 10px 0
+										color: darken($white, 50%)
 								&:hover
 									background: $white
 									&:before
@@ -155,11 +191,15 @@ header
 										width: 1000px
 										background: #fff
 										+pos(abs, 0 100% 0 null)
+										+media-breakpoint-down(lg)
+											display: none
 						.sub-img
 							width: calc(100% - 330px)
+							+media-breakpoint-down(lg)
+								display: none
 				&:hover
-					background: $lblue
 					+media-breakpoint-up(xl)
+						background: $lblue
 						.sub
 							display: block
 	
@@ -186,8 +226,10 @@ header
 	
 	.search
 		margin-left: 15px
+		+pos(rel,null)
 		.search-toggle
 			color: $white
+			cursor: pointer
 			+fs(16rem)
 			+media-breakpoint-down(lg)
 				// +fs(18rem)
@@ -197,5 +239,27 @@ header
 				align-items: center
 				align-content: center
 				justify-content: center
+		.search-wrap
+			display: none
+			+pos(abs, 42px 0 null null)
+			z-index: 500
+			.searchbox
+				input.searchinput
+					background: $main
+					color: $white
+					+fs(16rem)
+					padding: 8px 20px
+					border: none
+				button.searchbutton
+					+fs(0)
+					color: $white
+					+pos(abs, 5px 10px null null)
+					opacity: 0.5
+					&::before
+						content: '\f002'
+						+fs(16rem)
+					&:hover
+						opacity: 1
+
 
 

@@ -11,25 +11,20 @@ $(document).ready(function() {
     $('.btn-showmenu').on('click', function() {
         $('.btn-showmenu').toggleClass('active');
         $('.menu').slideToggle(300);
-        $('.search-toggle').removeClass('active');
-        $('.searchbox').slideUp(300);
-    });
-
-    $('.menu .has-sub').append("<div class='btn-showsub'></div>");
-    $('.sidebar .has-sub').append("<div class='btn-showsub'></div>");
-
-    $('.btn-showsub').click(function() {
-        $(this).toggleClass('active');
-        $(this)
-            .prev()
-            .slideToggle(200);
+        // $('.search-toggle').removeClass('active');
+        // $('.searchbox').slideUp(300);
     });
 
     $('.search-toggle').click(function() {
+        $('.search-wrap').slideToggle(300);
+    });
+
+    $('.menu .sub').before("<div class='btn-showsub'></div>");
+    $('.btn-showsub').on('click', function() {
         $(this).toggleClass('active');
-        $('.searchbox').slideToggle(200);
-        $('.btn-showmenu').removeClass('active');
-        $('.menu').slideUp(200);
+        $(this)
+            .siblings('.sub')
+            .slideToggle(300);
     });
 
     responsive();
@@ -52,7 +47,16 @@ $(document).ready(function() {
         autoplaySpeed: 3000,
         speed: 300,
         arrows: true,
-        dots: false
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
     $('.cert-slide-2').slick({
         slidesToShow: 4,
@@ -61,7 +65,16 @@ $(document).ready(function() {
         autoplaySpeed: 3000,
         speed: 300,
         arrows: true,
-        dots: false
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
     $('.cert-slide-3').slick({
         slidesToShow: 4,
@@ -70,7 +83,16 @@ $(document).ready(function() {
         autoplaySpeed: 3000,
         speed: 300,
         arrows: true,
-        dots: false
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     $('.history-content').slick({
@@ -88,7 +110,23 @@ $(document).ready(function() {
         focusOnSelect: true,
         arrows: true,
         dots: false,
-        infinite: false
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 6,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     $('.news-slide').slick({
@@ -149,6 +187,17 @@ $(document).ready(function() {
             }
         });
     }
+
+    // UPDATE SCRIPT
+    $('.bt-read').attr('href', null);
+    $('.bt-read').click(function() {
+        $([document.documentElement]).animate(
+            {
+                scrollTop: $('.journey').offset().top - 100
+            },
+            500
+        );
+    });
 });
 
 var responsive = function() {
@@ -158,13 +207,13 @@ var responsive = function() {
             "<span class='lnr lnr-magnifier'></span>"
         );
     } else {
-        $('header .language').insertBefore('header .search');
-        $('header .search-toggle').html("<i class='fa fa-search'></i>");
+        // $('header .language').insertBefore('header .search');
+        // $('header .search-toggle').html("<i class='fa fa-search'></i>");
     }
 };
 
 $(window).resize(function() {
-    responsive();
+    // responsive();
 });
 
 $(window).scroll(function() {

@@ -3,6 +3,10 @@
 	font-weight: 500
 	color: darken($white, 50%)
 	text-transform: uppercase
+	+media-breakpoint-down(lg)
+		+fs(16rem)
+	+media-breakpoint-down(sm)
+		+fs(14rem)
 
 .home-title
 	font-family: 'cooper'
@@ -11,6 +15,10 @@
 	color: $blue
 	text-transform: uppercase
 	margin-bottom: 15px
+	+media-breakpoint-down(lg)
+		+fs(22rem)
+	+media-breakpoint-down(sm)
+		+fs(18rem)
 	&::after
 		content: ''
 		display: block
@@ -18,8 +26,14 @@
 		height: 16px
 		margin-top: 10px
 		background: url(../img/line.png) center no-repeat
+		+media-breakpoint-down(lg)
+			height: 10px
+			background-size: auto 100%
+			background-position: left center
 	&.sm
 		+fs(22rem)
+		+media-breakpoint-down(lg)
+			+fs(18rem)
 	&.text-right
 		&::after
 			width: 100%
@@ -30,6 +44,10 @@
 			content: ''
 			width: 100%
 			background: url(../img/line2.png) center no-repeat
+			+media-breakpoint-down(lg)
+				height: 10px
+				background-size: auto 100%
+				background-position: center
 
 .home-section
 	padding: 40px 0
@@ -39,6 +57,7 @@
 		right: 0
 		z-index: -1
 		filter: brightness(60%)
+		background-size: cover !important
 
 .home-about
 	@extend .home-section
@@ -55,10 +74,18 @@
 		img
 			width: 100%
 			filter: brightness(70%)
+		&:hover
+			&::before
+				display: none
 
 .home-cate
 	padding-bottom: 40px
 	+pos(rel,null)
+	+media-breakpoint-down(sm)
+		.col-img
+			order: 1
+		.col-content
+			order: 2
 	&:nth-child(even)
 		.col-lg-5
 			+flexbox
@@ -74,6 +101,11 @@
 			width: 100%
 			height: 370px
 			object-fit: cover
+			+media-breakpoint-down(lg)
+				height: 300px
+			+media-breakpoint-down(sm)
+				height: 200px
+				margin: 15px 0
 	.block-content
 		max-width: 460px
 		padding: 0px 30px
@@ -91,22 +123,46 @@
 	background: #1f4284
 	.block-img
 		padding: 25px 0
+		+media-breakpoint-down(lg)
+			text-align: center
 	.block-content
 		color: $white
+		+media-breakpoint-down(lg)
+			text-align: center
 		.title
 			+fs(34rem)
 			font-weight: 700
 			text-transform: uppercase
+			+media-breakpoint-down(lg)
+				+fs(24rem)
+			+media-breakpoint-down(sm)
+				+fs(18rem)
 		.s-title
 			+fs(34rem)
 			margin-bottom: 15px
+			+media-breakpoint-down(lg)
+				+fs(16rem)
+			+media-breakpoint-down(sm)
+				+fs(14rem)
 		.btn-actions
 			+flexbox
 			align-items: center
+			+media-breakpoint-down(lg)
+				justify-content: center
+				margin-bottom: 30px
+			+media-breakpoint-down(sm)
+				flex-direction: column
 			.bt-primary
 				background: #163572
+				+media-breakpoint-down(sm)
+					width: 100%
 				+ .bt-primary
 					margin-left: 30px
+					+media-breakpoint-down(lg)
+						margin-left: 15px
+					+media-breakpoint-down(sm)
+						margin-left: 0
+						margin-top: 10px
 				&::after
 					content: '\e876'
 					font-family: 'linearicons-free'
@@ -121,6 +177,10 @@
 		max-width: 1060px
 		margin: 0 auto
 	.features
+		.col-12
+			+media-breakpoint-down(sm)
+				flex: 0 0 50%
+				max-width: 50%
 		.feature
 			text-align: center
 			.caption
@@ -131,18 +191,26 @@
 				align-content: center
 				justify-content: center
 				flex-direction: column
+				+media-breakpoint-down(lg)
+					height: 60px
 				.number
 					+fs(33rem)
 					font-weight: 600
 					line-height: 1.2
+					+media-breakpoint-down(lg)
+						+fs(20rem)
 					strong
 						+fs(48rem)
 						font-weight: 600
+						+media-breakpoint-down(lg)
+							+fs(24rem)
 					span
 						+fs(24rem)
 						font-weight: 500
+						+media-breakpoint-down(lg)
+							+fs(14rem)
 				.desc
-					+fs(16rem)
+					// +fs(16rem)
 	
 .home-news
 	@extend .home-section
@@ -160,6 +228,8 @@
 					+fs(14rem)
 					color: darken($white,30)
 					margin-bottom: 5px
+					+media-breakpoint-down(sm)
+						+fs(12rem)
 					&:before
 						content: '\e836'
 						font-family: 'linearicons-free'
@@ -168,7 +238,7 @@
 					margin-bottom: 5px
 					a
 						display: block
-						+fs(16rem)
+						// +fs(16rem)
 						line-height: 1.3
 						// font-weight: 600
 						color: $main
@@ -176,15 +246,19 @@
 						display: -webkit-box
 						-webkit-line-clamp: 2
 						-webkit-box-orient: vertical
+						+media-breakpoint-down(sm)
+							+fs(14rem)
 						&:hover
 							color: $lblue
 				.des
-					+fs(16rem)
+					// +fs(16rem)
 					overflow: hidden
 					display: -webkit-box
 					-webkit-line-clamp: 2
 					-webkit-box-orient: vertical
 					margin-bottom: 5px
+					+media-breakpoint-down(sm)
+						+fs(13rem)
 				.link
 					+fs(13rem)
 					color: $blue
@@ -203,6 +277,8 @@
 						a
 							+fs(20rem)
 							font-weight: 600
+							+media-breakpoint-down(sm)
+								+fs(16rem)
 
 .home-brand
 	@extend .home-section
@@ -223,6 +299,10 @@
 			align-content: center
 			justify-content: center
 			background: $white
+			+media-breakpoint-down(lg)
+				height: 100px
+			+media-breakpoint-down(sm)
+				height: 80px
 			+ .brand
 				margin-left: 30px
 			img
@@ -234,6 +314,8 @@
 	.cert-slide
 		+pos(rel,null)
 		margin: 0px -15px
+		+media-breakpoint-down(sm)
+			margin: 0px 10px
 		.slick-arrow
 			+pos(abs, 50% null null null)
 			+transform(translateY(-50%))
@@ -255,14 +337,20 @@
 					background: $blue
 			&.slick-prev
 				left: -30px
+				+media-breakpoint-down(sm)
+					left: -15px
 				&::before
 					content: '\f104'
 			&.slick-next
 				right: -30px
+				+media-breakpoint-down(sm)
+					right: -15px
 				&::before
 					content: '\f105'
 		.item
 			padding: 0px 15px
+			+media-breakpoint-down(sm)
+				padding: 0px 10px
 			.cert
 				+flexbox
 				height: 165px
@@ -272,6 +360,8 @@
 				+bor-rad(5px)
 				background: $white
 				border: 1px solid darken($white,20%)
+				+media-breakpoint-down(lg)
+					height: 100px
 				img
 					max-width: 80%
 					max-height: 80%
@@ -279,3 +369,10 @@
 .home-career
 	@extend .home-section
 	margin-bottom: 60px
+	+media-breakpoint-down(sm)
+		.col-12
+			&:nth-child(1)
+				order: 2
+			&:nth-child(2)
+				order: 1
+				margin-bottom: 15px

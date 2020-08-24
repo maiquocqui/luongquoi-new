@@ -8,6 +8,13 @@
 	+bor-rad(100px)
 	text-align: center
 	text-transform: uppercase
+	+media-breakpoint-down(lg)
+		+fs(13rem)
+		font-weight: 600
+		padding: 10px 25px
+	+media-breakpoint-down(sm)
+		+fs(13rem)
+		padding: 7px 20px
 .bt-primary
 	@extend .bn-button
 	background: $blue
@@ -17,16 +24,25 @@
 	&.sm
 		+fs(15rem)
 		padding: 10px 40px
+		+media-breakpoint-down(sm)
+			padding: 4px 17px
 .bt-outline
 	@extend .bn-button
 	padding: 10px 40px
 	border: 3px solid $blue
+	+media-breakpoint-down(lg)
+		padding: 7px 22px
+	+media-breakpoint-down(sm)
+		padding: 4px 17px
 	&:hover
 		background: $blue
 		color: $white
 	&.sm
 		+fs(15rem)
 		border-width: 1px
+		padding: 8px 38px
+		+media-breakpoint-down(sm)
+			padding: 2px 16px
 .bt-outline2
 	@extend .bt-outline
 	color: $blue
