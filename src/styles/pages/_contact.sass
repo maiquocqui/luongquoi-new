@@ -3,6 +3,8 @@
 	.contact-info
 		+pos(rel,null)
 		padding: 60px 0
+		+media-breakpoint-down(lg)
+			padding: 30px 0
 		.bg
 			+pos(abs, 0 null 0 0)
 			right: 0
@@ -20,6 +22,11 @@
 				color: $white
 				+pos(rel,null)
 				margin-bottom: 50px
+				+media-breakpoint-down(lg)
+					+fs(22rem)
+					margin-bottom: 30px
+				+media-breakpoint-down(sm)
+					margin-bottom: 15px
 				&::before
 					content: ''
 					display: inline-block
@@ -27,6 +34,10 @@
 					height: 52px
 					margin-right: 10px
 					background: url(../img/ql2.png) center center no-repeat
+					+media-breakpoint-down(lg)
+						width: 50px
+						height: 50px
+						background-size: 100% auto
 				&::after
 					content: ''
 					display: inline-block
@@ -35,6 +46,10 @@
 					height: 30px
 					margin-left: 10px
 					background: url(../img/qr2.png) center center no-repeat
+					+media-breakpoint-down(lg)
+						width: 30px
+						height: 30px
+						background-size: 100% auto
 			.email
 				display: inline-block
 				background: $blue
@@ -46,6 +61,14 @@
 				+bor-rad(100px)
 				+pos(rel,null)
 				margin-bottom: 50px
+				+media-breakpoint-down(lg)
+					+fs(18rem)
+					line-height: 40px
+					padding-left: 50px
+					padding-right: 20px
+					margin-bottom: 30px
+				+media-breakpoint-down(sm)
+					margin-bottom: 15px
 				&::before
 					content: '\f0e0'
 					background: $white
@@ -58,11 +81,18 @@
 					height: 60px
 					+bor-rad(100px)
 					+pos(abs, 0 null null 0)
+					+media-breakpoint-down(lg)
+						width: 40px
+						height: 40px
 			.phone
 				color: $white
 				line-height: 1.1
 				+pos(rel,null)
 				padding-left: 100px
+				+media-breakpoint-down(lg)
+					padding-left: 60px
+				+media-breakpoint-down(sm)
+					margin-bottom: 15px
 				&:before
 					content: ''
 					display: block
@@ -70,18 +100,29 @@
 					height: 71px
 					background: url(../img/phone.png) center center no-repeat
 					+pos(abs, 8px null null 0)
+					+media-breakpoint-down(lg)
+						width: 50px
+						height: 50px
+						background-size: 100% auto
+						top: 0
 				span
 					+fs(36rem)
 					display: block
+					+media-breakpoint-down(lg)
+						+fs(20rem)
 				a
 					+fs(48rem)
 					display: block
 					font-weight: 700
+					+media-breakpoint-down(lg)
+						+fs(32rem)
 		.block-form
 			.contact-form
 				background: $white
 				+bor-rad(20px)
 				overflow: hidden
+				+media-breakpoint-down(lg)
+					+bor-rad(5px)
 				.module-title
 					+fs(24rem)
 					text-transform: uppercase
@@ -90,8 +131,12 @@
 					text-align: center
 					background: $blue
 					padding: 10px
+					+media-breakpoint-down(lg)
+						+fs(16rem)
 				.form-wrap
 					padding: 30px
+					+media-breakpoint-down(lg)
+						padding: 15px
 
 	.contact-location
 		padding: 30px 0
@@ -99,8 +144,12 @@
 		.location-list
 			.location
 				cursor: pointer
+				+media-breakpoint-down(sm)
+					margin-bottom: 15px
 		.location-map
 			border: 3px solid #e2e2e2
+			+media-breakpoint-down(sm)
+				display: none
 			+bor-rad(5px)
 			.log-map
 				display: none

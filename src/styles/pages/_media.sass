@@ -10,9 +10,13 @@
 		margin: 0 auto
 		background: url(../img/nav.png) center bottom no-repeat
 		// border-bottom: 1px solid darken($white,10% )
+		+media-breakpoint-down(md)
+			min-width: 0
 		li
 			+ li
 				margin-left: 10px
+				+media-breakpoint-down(md)
+					margin-left: 5px
 			a
 				display: block
 				padding: 8px 20px
@@ -21,6 +25,11 @@
 				background: $white
 				border: 1px solid darken($white, 10%)
 				// border-bottom: none
+				+media-breakpoint-down(md)
+					+fs(13rem)
+					padding: 5px 10px
+				+media-breakpoint-down(sm)
+					text-align: center
 			&:hover
 				a
 					color: $blue

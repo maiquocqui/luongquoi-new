@@ -193,6 +193,11 @@ header
 										+pos(abs, 0 100% 0 null)
 										+media-breakpoint-down(lg)
 											display: none
+								&.active
+									+media-breakpoint-down(lg)
+										a
+											color: $red
+											font-weight: 600
 						.sub-img
 							width: calc(100% - 330px)
 							+media-breakpoint-down(lg)
@@ -202,6 +207,11 @@ header
 						background: $lblue
 						.sub
 							display: block
+				&.active
+					+media-breakpoint-down(lg)
+						> a
+							color: $blue
+							font-weight: 600
 	
 	.language
 		+flexbox
@@ -227,12 +237,13 @@ header
 	.search
 		margin-left: 15px
 		+pos(rel,null)
+		+media-breakpoint-down(lg)
+			margin-left: 0
 		.search-toggle
 			color: $white
 			cursor: pointer
 			+fs(16rem)
 			+media-breakpoint-down(lg)
-				// +fs(18rem)
 				+flexbox
 				width: 20px
 				height: 16px
@@ -248,12 +259,13 @@ header
 					background: $main
 					color: $white
 					+fs(16rem)
+					line-height: 1
 					padding: 8px 20px
 					border: none
 				button.searchbutton
 					+fs(0)
 					color: $white
-					+pos(abs, 5px 10px null null)
+					+pos(abs, 10px 10px null null)
 					opacity: 0.5
 					&::before
 						content: '\f002'

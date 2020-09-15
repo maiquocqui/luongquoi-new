@@ -15,6 +15,8 @@
 	color: $blue
 	text-transform: uppercase
 	margin-bottom: 15px
+	> *
+		font-family: 'cooper'
 	+media-breakpoint-down(lg)
 		+fs(22rem)
 	+media-breakpoint-down(sm)
@@ -320,6 +322,7 @@
 			+pos(abs, 50% null null null)
 			+transform(translateY(-50%))
 			+fs(0)
+			z-index: 5
 			&::before
 				content: ''
 				+fs(16rem)

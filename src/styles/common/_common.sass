@@ -77,16 +77,18 @@ input[type="reset"]
 		display: none
 
 .pages, .modulepager
-	margin: -30px 0px 40px
+	margin: 20px 0
 	ul.pagination
 		+flexbox
 		align-items: center
 		align-content: center
 		justify-content: center
+		flex-wrap: wrap
 		li
 			display: block
 			+ li
 				margin-left: 5px
+				margin-top: 5px
 			a,span
 				+flexbox
 				width: 36px

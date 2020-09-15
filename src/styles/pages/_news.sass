@@ -1,7 +1,11 @@
 .news-page
 	padding: 50px 0
+	+media-breakpoint-down(sm)
+		padding: 30px 0
 	.news-list
 		.news
+			+media-breakpoint-down(sm)
+				margin-bottom: 10px
 			.img
 				display: block
 				img
@@ -16,6 +20,8 @@
 					+fs(14rem)
 					color: darken($white,30)
 					margin-bottom: 5px
+					+media-breakpoint-down(sm)
+						+fs(13rem)
 					&:before
 						content: '\e836'
 						font-family: 'linearicons-free'
@@ -28,11 +34,15 @@
 						font-weight: 600
 						color: $main
 						+textover(3)
+						+media-breakpoint-down(sm)
+							+fs(16rem)
 				.des
 					+fs(16rem)
 					line-height: 1.3
 					+textover(2)
 					margin-bottom: 5px
+					+media-breakpoint-down(sm)
+						+fs(14rem)
 				.link
 					color: $blue
 					&::after
@@ -96,8 +106,12 @@
 					display: none
 		.slick-list
 			margin: 0px -15px
+			+media-breakpoint-down(sm)
+				margin: 0px -5px
 		.item
 			padding: 0px 15px
+			+media-breakpoint-down(sm)
+				padding: 0px 5px
 		.news
 			.img
 				display: block
@@ -108,6 +122,8 @@
 					+fs(14rem)
 					color: darken($white,30)
 					margin-bottom: 5px
+					+media-breakpoint-down(sm)
+						+fs(13rem)
 					&:before
 						content: '\e836'
 						font-family: 'linearicons-free'
@@ -116,6 +132,10 @@
 					a
 						color: $black
 						+textover(2)
+						+media-breakpoint-down(sm)
+							+fs(14rem)
+							font-weight: 500
+							line-height: 1.3
 						&:hover
 							color: $blue
 	
@@ -129,14 +149,21 @@
 			.img
 				display: block
 				width: 45%
+				+media-breakpoint-down(sm)
+					width: 80px
 			.caption
 				width: 55%
 				padding-left: 30px
+				+media-breakpoint-down(sm)
+					width: calc(100% - 80px)
+					padding-left: 10px
 				time
 					display: block
 					+fs(14rem)
 					color: darken($white,30)
 					margin-bottom: 5px
+					+media-breakpoint-down(sm)
+						+fs(13rem)
 					&:before
 						content: '\e836'
 						font-family: 'linearicons-free'
@@ -149,12 +176,18 @@
 						line-height: 1.2
 						font-weight: 600
 						+textover(3)
+						+media-breakpoint-down(sm)
+							+fs(16rem)
+							+textover(2)
 						&:hover
 							color: $blue
 				.des
 					+fs(16rem)
 					line-height: 1.3
 					+textover(6)
+					+media-breakpoint-down(sm)
+						+fs(14rem)
+						+textover(2)
 
 .qc
 	.item
@@ -171,10 +204,15 @@
 		line-height: 1.2
 		font-weight: 600
 		margin-bottom: 10px
+		+media-breakpoint-down(lg)
+			+fs(28rem)
+		+media-breakpoint-down(sm)
+			+fs(16rem)
 	.share-wrap
 		+flexbox
 		align-items: center
 		align-content: center
+		margin-bottom: 15px
 		time
 			display: block
 			+fs(14rem)
@@ -207,6 +245,8 @@
 		color: #222222
 		+pos(rel,null)
 		padding-left: 20px
+		+media-breakpoint-down(sm)
+			+fs(14rem)
 		span
 			color: #a1a1a1
 		&::before
@@ -278,3 +318,7 @@
 						height: 2px
 						background: $blue
 						margin: 10px auto 0
+
+.news-detail-page
+	.news-list, .news-slide
+		display: none
