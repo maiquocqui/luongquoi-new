@@ -148,10 +148,49 @@
 					margin-bottom: 15px
 		.location-map
 			border: 3px solid #e2e2e2
-			+media-breakpoint-down(sm)
-				display: none
 			+bor-rad(5px)
+			+media-breakpoint-down(md)
+				border: none
+				+bor-rad(0)
+			// +media-breakpoint-down(sm)
+			// 	display: none
 			.log-map
 				display: none
+				+media-breakpoint-down(md)
+					+pos(fix, 50% null null 50%)
+					+transform(translate(-50%,-50%))
+					z-index: 1000
+					background: $white
+					+bor-rad(5px)
+					padding: 10px
+					width: 90%
+					height: 90%
+					max-width: 700px
+					max-height: 600px
+					border: 1px solid rgba(0,0,0,.2)
+					+media-breakpoint-down(sm)
+						max-height: 400px
+					iframe
+						width: 100% !important
+						height: 100% !important
+
 				&.active
 					display: block
+				.close
+					background: lighten($red,10%)
+					color: $white
+					text-shadow: none
+					width: 24px
+					height: 24px
+					align-items: center
+					align-content: center
+					justify-content: center
+					line-height: 1
+					+bor-rad(100px)
+					opacity: 1
+					+pos(abs, 10px 10px null null)
+					z-index: 10
+					+fs(14rem)
+					display: none
+					+media-breakpoint-down(md)
+						+flexbox
