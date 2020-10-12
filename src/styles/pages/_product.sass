@@ -78,3 +78,41 @@
 					img
 						max-width: 80%
 						max-height: 80%
+
+// NEW UPDATE
+.product-page
+	.product-detail
+		margin: -50px 0
+		.detail-section
+			padding: 80px 0
+			padding-bottom: 450px
+			+media-breakpoint-down(lg)
+				padding-top: 40px
+				padding-bottom: 300px
+				.bg
+					background-size: 100% auto !important
+			+media-breakpoint-down(sm)
+				padding-bottom: 200px
+			&.no-bg
+				padding-bottom: 80px
+				+media-breakpoint-down(lg)
+					padding-bottom: 40px
+			+pos(rel,null)
+			.bg
+				+pos(abs, 0 null 0 0)
+				right: 0
+				z-index: -1
+			.pr-logo
+				+media-breakpoint-down(lg)
+					img
+						max-width: 300px
+			.pr-desciption
+				background: #efeff0
+				padding: 25px
+				+bor-rad(5px)
+	.detail-guide
+		background: color-rgba(#1d428a,0.05)
+		padding: 40px 0
+		border-top: 1px solid darken($white, 10%)
+		.guide-img
+			margin-bottom: 30px
