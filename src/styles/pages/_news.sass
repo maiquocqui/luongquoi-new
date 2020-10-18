@@ -262,62 +262,62 @@
 
 .evo-page
 	padding: 50px 0
-	.evo-feature
-		max-width: 900px
-		margin: 0 auto 20px
-		.evo
-			margin-bottom: 20px
-			+flexbox
-			justify-content: center
-	.evo-quote
-		border: 8px solid #f3f3f3
-		padding: 30px 0 15px
-		.content
-			text-align: center
-			max-width: 730px
-			margin: 0 auto
-			+pos(rel,null)
-			+fs(18rem)
-			&::before
-				content: ''
-				display: block
-				width: 78px
-				height: 66px
-				background: url(../img/ql.png) center center no-repeat
-				+pos(abs, -20px null null -90px)
-				z-index: 1
-			&::after
-				content: ''
-				display: block
-				width: 48px
-				height: 41px
-				background: url(../img/qr.png) center center no-repeat
-				+pos(abs, null -60px -20px null)
-				z-index: 1
-	.evo-img
-		margin: 50px 0
-	.evo-list
-		max-width: 920px
+.evo-feature
+	max-width: 900px
+	margin: 0 auto 20px
+	.evo
+		margin-bottom: 20px
+		+flexbox
+		justify-content: center
+.evo-quote
+	border: 8px solid #f3f3f3
+	padding: 30px 0 15px
+	.content
+		text-align: center
+		max-width: 730px
 		margin: 0 auto
-		.evo-item
-			margin-bottom: 30px
-			.img
+		+pos(rel,null)
+		+fs(18rem)
+		&::before
+			content: ''
+			display: block
+			width: 78px
+			height: 66px
+			background: url(../img/ql.png) center center no-repeat
+			+pos(abs, -20px null null -90px)
+			z-index: 1
+		&::after
+			content: ''
+			display: block
+			width: 48px
+			height: 41px
+			background: url(../img/qr.png) center center no-repeat
+			+pos(abs, null -60px -20px null)
+			z-index: 1
+.evo-img
+	margin: 50px 0
+.evo-list
+	max-width: 920px
+	margin: 0 auto
+	.evo-item
+		margin-bottom: 30px
+		.img
+			display: block
+			img
+				width: 100%
+		.caption
+			padding: 10px
+			.name
 				display: block
-				img
-					width: 100%
-			.caption
-				padding: 10px
-				.name
+				+textover(2)
+				text-align: center
+				&:after
+					content: ''
 					display: block
-					+textover(2)
-					text-align: center
-					&:after
-						content: ''
-						display: block
-						width: 40px
-						height: 2px
-						background: $blue
-						margin: 10px auto 0
+					width: 40px
+					height: 2px
+					background: $blue
+					margin: 10px auto 0
 
 .news-detail-page
 	.news-list, .news-slide

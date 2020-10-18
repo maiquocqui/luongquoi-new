@@ -54,12 +54,19 @@
 				font-size: 80%
 			&:hover
 				color: $white
+			&.active
+				&:after
+					content: '\e877'
 		.content
 			.quote
 				+media-breakpoint-down(lg)
 					width: 80% !important
 				+media-breakpoint-down(sm)
 					width: 100% !important
+		.hidden-content
+			display: none
+			// &.active
+			// 	display: block
 	.journey
 		margin-bottom: 50px
 
@@ -151,6 +158,9 @@
 					padding: 20px 30px
 	
 	.htcl
+		> .row
+			align-items: center
+			align-content: center
 		margin-bottom: 50px
 		+media-breakpoint-down(sm)
 			margin-bottom: 5px

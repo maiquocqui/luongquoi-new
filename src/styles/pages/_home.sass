@@ -134,15 +134,19 @@
 		+media-breakpoint-down(lg)
 			text-align: center
 		.title
-			+fs(34rem)
-			font-weight: 700
+			+fs(26rem)
+			font-family: 'Fira Sans Condensed', sans-serif
+			font-weight: 600
 			text-transform: uppercase
+			margin-bottom: 15px
 			+media-breakpoint-down(lg)
 				+fs(24rem)
 			+media-breakpoint-down(sm)
 				+fs(18rem)
 		.s-title
-			+fs(34rem)
+			+fs(26rem)
+			// font-weight: normal
+			font-family: 'Fira Sans Condensed', sans-serif
 			margin-bottom: 15px
 			+media-breakpoint-down(lg)
 				+fs(16rem)
@@ -157,7 +161,8 @@
 			+media-breakpoint-down(sm)
 				flex-direction: column
 			.bt-primary
-				background: #163572
+				color: #163572
+				background: $white
 				+media-breakpoint-down(sm)
 					width: 100%
 				+ .bt-primary
@@ -173,6 +178,7 @@
 					font-size: 60%
 					margin-left: 10px
 				&:hover
+					color: $white
 					background: $lblue
 
 .home-special

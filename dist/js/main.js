@@ -25,16 +25,16 @@ $(document).ready(function () {
 
     responsive();
 
-    // $('.banner').slick({
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     fade: true,
-    //     speed: 500,
-    //     arrows: true,
-    //     dots: true,
-    //     autoplay: true,
-    //     autoplaySpeed: 5000,
-    // });
+    $('.banner-slide').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        speed: 500,
+        arrows: false,
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 5000
+    });
 
     $('.cert-slide').slick({
         slidesToShow: 5,
@@ -120,7 +120,18 @@ $(document).ready(function () {
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: true,
-        dots: true
+        dots: true,
+        responsive: [{
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                speed: 500,
+                arrows: false
+            }
+        }]
     });
 
     $('.vnl-slide').slick({
@@ -139,18 +150,36 @@ $(document).ready(function () {
 
     if ($('.career-page').length > 0) {
         $('.job-item .viewdetail').click(function () {
-            $('.job-item').removeClass('active');
-            $('.job-item .content').removeClass('active');
-            $('.job-item .viewdetail').removeClass('active').text('Xem chi tiết');
-
-            $(this).toggleClass('active');
-            $(this).parents('.job-item').toggleClass('active');
-            $(this).parents('.job-item').find('.content').toggleClass('active');
-            if ($(this).hasClass('active')) {
+            // $('.job-item').removeClass('active');
+            // $('.job-item .content').removeClass('active');
+            // $('.job-item .viewdetail').removeClass('active').text('Xem chi tiết');
+            if (!$(this).hasClass('active')) {
+                console.log('khong co');
+                $(this).addClass('active');
                 $(this).text('Thu gọn');
+                $(this).parents('.job-item').addClass('active');
+                $(this).parents('.job-item').find('.content').addClass('active');
             } else {
+                console.log('co');
+                $(this).removeClass('active');
                 $(this).text('Xem chi tiết');
+                $(this).parents('.job-item').removeClass('active');
+                $(this).parents('.job-item').find('.content').removeClass('active');
             }
+        });
+    }
+
+    // Career form
+    $('.btn-apply').click(function () {
+        $('.career-frame').slideToggle(300);
+    });
+
+    if ($('.btn-applyjob').length > 0) {
+        $('.btn-applyjob').click(function () {
+            var link = $(this).attr('rel');
+            $('#popupjob iframe').attr('src', link);
+            $('#popupjob').modal({ show: true });
+            return false;
         });
     }
 
@@ -170,10 +199,34 @@ $(document).ready(function () {
 
     // UPDATE SCRIPT
     $('.bt-read').attr('href', null);
+
     $('.bt-read').click(function () {
-        $([document.documentElement]).animate({
-            scrollTop: $('.journey').offset().top - 100
-        }, 500);
+        $('.hidden-content').slideToggle(300);
+        $(this).toggleClass('active');
+        if ($(this).hasClass('active')) {
+            $(this).text('THU GỌN');
+        } else {
+            $(this).text('ĐỌC CÂU CHUYỆN');
+        }
+    });
+    // $('.bt-read').click(function() {
+    //     $([document.documentElement]).animate(
+    //         {
+    //             scrollTop: $('.journey').offset().top - 100
+    //         },
+    //         500
+    //     );
+    // });
+
+    $('.log-map').append('<span class="close"><span class="lnr lnr-cross"></span></span>');
+
+    if ($('.location').length > 0 && $(window).outerWidth() < 768) {
+        $('.location').removeClass('active');
+        $('.log-map').removeClass('active');
+    }
+
+    $('.log-map .close').click(function () {
+        $(this).parent().removeClass('active');
     });
 });
 
