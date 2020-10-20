@@ -9805,13 +9805,17 @@ body.searchresults .home-banner {
           margin: 0 0 10px;
           background: url(../img/line2.png) center no-repeat; }
 
+.location-list .row {
+  justify-content: center; }
+
 .location-list .location {
   position: relative;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 2px solid #e2e2e2; }
   .location-list .location .img {
     display: block;
-    border-radius: 5px;
-    overflow: hidden;
     position: relative; }
     .location-list .location .img:before {
       content: '';
@@ -9868,24 +9872,8 @@ body.searchresults .home-banner {
     -ms-transform: scale3d(1.1, 1.1, 1);
     -o-transform: scale3d(1.1, 1.1, 1);
     transform: scale3d(1.1, 1.1, 1); }
-  .location-list .location.active::before {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-top-color: none;
-    border-bottom-color: #e2e2e2;
-    z-index: 1;
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -khtml-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%); }
+  .location-list .location.active {
+    border: 2px solid #1d428a; }
 
 .system-page {
   padding: 50px 0; }

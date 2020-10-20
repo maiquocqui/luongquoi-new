@@ -319,13 +319,16 @@
 
 
 .location-list
+	.row
+		justify-content: center
 	.location
 		+pos(rel,null)
 		margin-bottom: 30px
+		+bor-rad(5px)
+		overflow: hidden
+		border: 2px solid #e2e2e2
 		.img
 			display: block
-			+bor-rad(5px)
-			overflow: hidden
 			+pos(rel,null)
 			&:before
 				content: ''
@@ -368,14 +371,15 @@
 				img
 						+transform(scale3d(1.1,1.1,1))
 		&.active
-			&::before
-				content: ''
-				display: block
-				width: 0
-				height: 0
-				border: 10px solid transparent
-				border-top-color: none
-				border-bottom-color: #e2e2e2
-				z-index: 1
-				+pos(abs, null null -30px 50%)
-				+transform(translateX(-50%))
+			border: 2px solid $blue
+			// &::before
+			// 	content: ''
+			// 	display: block
+			// 	width: 0
+			// 	height: 0
+			// 	border: 10px solid transparent
+			// 	border-top-color: none
+			// 	border-bottom-color: #e2e2e2
+			// 	z-index: 1
+			// 	+pos(abs, null null -30px 50%)
+			// 	+transform(translateX(-50%))
