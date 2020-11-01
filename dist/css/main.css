@@ -11120,4 +11120,75 @@ body.searchresults .home-banner {
       content: '\f105';
       margin-left: 10px; }
 
+.evo-relative {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px; }
+  @media (max-width: 575.98px) {
+    .evo-relative {
+      display: block; } }
+  .evo-relative .relative-item {
+    flex: 1;
+    height: 300px;
+    -webkit-transition: all, 0.5s;
+    -khtml-transition: all, 0.5s;
+    -moz-transition: all, 0.5s;
+    -ms-transition: all, 0.5s;
+    -o-transition: all, 0.5s;
+    transition: all, 0.5s;
+    position: relative; }
+    @media (max-width: 575.98px) {
+      .evo-relative .relative-item {
+        display: block;
+        flex: unset;
+        width: 100%;
+        height: 200px; } }
+    .evo-relative .relative-item .img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1; }
+      .evo-relative .relative-item .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(80%);
+        -webkit-transition: all, 0.5s;
+        -khtml-transition: all, 0.5s;
+        -moz-transition: all, 0.5s;
+        -ms-transition: all, 0.5s;
+        -o-transition: all, 0.5s;
+        transition: all, 0.5s; }
+    .evo-relative .relative-item .caption {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      text-align: center;
+      padding: 15px; }
+      .evo-relative .relative-item .caption .name {
+        font-size: 1.125rem;
+        text-transform: uppercase;
+        color: #fff; }
+    @media (min-width: 576px) {
+      .evo-relative .relative-item:hover {
+        flex: 2; }
+        .evo-relative .relative-item:hover .img img {
+          filter: brightness(50%); } }
+
 /*# sourceMappingURL=main.css.map */
