@@ -2,29 +2,76 @@
 
 .home-banner
 	.banner-slide
+		.slick-arrow
+			+pos(abs,null)
+			top: 50%
+			+transform(translateY(-50%))
+			z-index: 5
+			+fs(0)
+			&::before
+				color: $white
+				+fs(24rem)
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				width: 60px
+				height: 60px
+				background: color-rgba($black,0.3)
+				+bor-rad(100px)
+		.slick-next
+			right: 30px
+			&::before
+				content: '\f105'
+		.slick-prev
+			left: 30px
+			&::before
+				content: '\f104'
+		
+		.slick-dots
+			+pos(abs, null null 30px null)
+			left: 50%
+			+transform(translateX(-50%))
+			li
+				display: inline-block
+				width: 10px
+				height: 10px
+				+bor-rad(100px)
+				background: $white
+				cursor: pointer
+				opacity: 0.5
+				+transition(all,0.5s)
+				+ li
+					margin-left: 10px
+				&.slick-active
+					width: 30px
+					opacity: 1
+				button
+					display: none
+
 		.slick-slide
 			> div
 				display: block !important
 				> .item
 					display: block !important
-	.banner-img
-		+pos(rel,null)
-		&::before
-			content: ''
-			display: block
-			+pos(abs, 0 null 0 0)
-			right: 0
-			background: #b2c7ee
-			opacity: 0.25
-			z-index: 1
-		&::after
-			content: ''
-			display: block
-			+pos(abs, 0 null 0 0)
-			right: 0
-			background: #001743
-			opacity: 0.35
-			z-index: 2
+		.img
+			+pos(rel,null)
+			&::before
+				content: ''
+				display: block
+				+pos(abs, 0 null 0 0)
+				right: 0
+				background: #b2c7ee
+				opacity: 0.25
+				z-index: 1
+			&::after
+				content: ''
+				display: block
+				+pos(abs, 0 null 0 0)
+				right: 0
+				background: #001743
+				opacity: 0.35
+				z-index: 2
 		img
 			width: 100%
 			+media-breakpoint-down(sm)

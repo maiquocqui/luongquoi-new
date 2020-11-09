@@ -28,12 +28,12 @@ $(document).ready(function () {
     $('.banner-slide').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        fade: true,
+        // fade: true,
         speed: 500,
-        arrows: false,
-        dots: false,
-        autoplay: true,
-        autoplaySpeed: 5000
+        arrows: true,
+        dots: true,
+        autoplay: true
+        // autoplaySpeed: 5000
     });
 
     $('.cert-slide').slick({
