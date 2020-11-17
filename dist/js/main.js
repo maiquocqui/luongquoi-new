@@ -244,6 +244,15 @@ $(document).ready(function () {
     $('.log-map .close').click(function () {
         $(this).parent().removeClass('active');
     });
+
+    $('.showchat').click(function () {
+        $(this).hide();
+        $('.chatbox').toggle();
+    });
+    $('.minimize').click(function () {
+        $('.chatbox').hide();
+        $('.showchat').show();
+    });
 });
 
 var responsive = function responsive() {

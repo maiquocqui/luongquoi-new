@@ -275,6 +275,15 @@ $(document).ready(function() {
             .parent()
             .removeClass('active');
     });
+
+    $('.showchat').click(function(){
+        $(this).hide();
+        $('.chatbox').toggle();
+    });
+    $('.minimize').click(function(){
+        $('.chatbox').hide();
+        $('.showchat').show();
+    })
 });
 
 var responsive = function responsive() {
