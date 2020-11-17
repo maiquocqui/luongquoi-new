@@ -94,6 +94,24 @@ $(document).ready(function() {
             }
         ]
     });
+    $('.cert-slide-4').slick({
+        slidesToShow: 8,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 300,
+        arrows: true,
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
 
     $('.history-content').slick({
         slidesToShow: 1,

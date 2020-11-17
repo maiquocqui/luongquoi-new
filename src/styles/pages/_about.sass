@@ -176,63 +176,6 @@
 					+ img
 						width: 60%
 						margin-left: 10px
-		.cert-slide-2
-			.slick-arrow
-				+pos(abs, 50% null null null)
-				+transform(translateY(-50%))
-				+fs(0)
-				&::before
-					content: ''
-					+fs(16rem)
-					width: 30px
-					height: 30px
-					+flexbox()
-					align-items: center
-					align-content: center
-					justify-content: center
-					color: $white
-					+bor-rad(100%)
-					background: color-rgba($black,0.3)
-				&:hover
-					&::before
-						background: $blue
-				&.slick-prev
-					left: -40px
-					+media-breakpoint-down(sm)
-						left: -15px
-					&::before
-						content: '\f104'
-				&.slick-next
-					right: -40px
-					+media-breakpoint-down(sm)
-						right: -15px
-					&::before
-						content: '\f105'
-			.item
-				.cert
-					+flexbox
-					align-items: center
-					align-content: center
-					justify-content: center
-					height: 180px
-					+media-breakpoint-down(sm)
-						height: 100px
-					img
-						max-width: 100%
-						max-height: 100%
-						+media-breakpoint-down(sm)
-							max-width: 80%
-							max-height: 80%
-		.cert-slide-3
-			@extend .cert-slide-2
-			.item
-				.cert
-					height: 380px
-					+media-breakpoint-down(lg)
-						height: 200px
-					+media-breakpoint-down(sm)
-						height: 120px
-	
 
 	.qt-quote
 		max-width: 1140px
@@ -383,3 +326,73 @@
 			// 	z-index: 1
 			// 	+pos(abs, null null -30px 50%)
 			// 	+transform(translateX(-50%))
+
+.cert-slide-2
+	.slick-arrow
+		+pos(abs, 50% null null null)
+		+transform(translateY(-50%))
+		+fs(0)
+		&::before
+			content: ''
+			+fs(16rem)
+			width: 30px
+			height: 30px
+			+flexbox()
+			align-items: center
+			align-content: center
+			justify-content: center
+			color: $white
+			+bor-rad(100%)
+			background: color-rgba($black,0.3)
+		&:hover
+			&::before
+				background: $blue
+		&.slick-prev
+			left: -40px
+			+media-breakpoint-down(sm)
+				left: -15px
+			&::before
+				content: '\f104'
+		&.slick-next
+			right: -40px
+			+media-breakpoint-down(sm)
+				right: -15px
+			&::before
+				content: '\f105'
+	.item
+		.cert
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			height: 180px
+			+media-breakpoint-down(sm)
+				height: 100px
+			img
+				max-width: 100%
+				max-height: 100%
+				+media-breakpoint-down(sm)
+					max-width: 80%
+					max-height: 80%
+.cert-slide-3
+	@extend .cert-slide-2
+	.item
+		.cert
+			height: 380px
+			+media-breakpoint-down(lg)
+				height: 200px
+			+media-breakpoint-down(sm)
+				height: 120px
+
+.cert-slide-4
+	@extend .cert-slide-2
+	.item
+		.cert
+			height: 120px
+			img
+				max-width: 80%
+				max-height: 80%
+			+media-breakpoint-down(lg)
+				height: 100px
+			+media-breakpoint-down(sm)
+				height: 80px
