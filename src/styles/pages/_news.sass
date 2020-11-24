@@ -303,13 +303,16 @@
 		margin-bottom: 30px
 		.img
 			display: block
+			overflow: hidden
 			img
 				width: 100%
+				+transition(all,0.5s)
 		.caption
 			padding: 10px
 			.name
 				display: block
 				+textover(2)
+				font-weight: 600
 				text-align: center
 				&:after
 					content: ''
@@ -318,6 +321,14 @@
 					height: 2px
 					background: $blue
 					margin: 10px auto 0
+		&:hover
+			.img
+				img
+					filter: brightness(110%)
+					+transform(scale3d(1.1,1.1,1))
+			.caption
+				.name
+					color: $red
 
 .news-detail-page
 	.news-list, .news-slide

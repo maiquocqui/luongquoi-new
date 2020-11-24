@@ -19,12 +19,26 @@
 				height: 60px
 				background: color-rgba($black,0.3)
 				+bor-rad(100px)
+				+media-breakpoint-down(md)
+					width: 30px
+					height: 30px
+					+bor-rad(0)
+					background: none
+					text-shadow: 1 1 1 color-rgba($black,0.5)
+				+media-breakpoint-down(sm)
+					display: none !important
 		.slick-next
 			right: 30px
+			+media-breakpoint-down(md)
+				right: 10px
+			+media-breakpoint-down(sm)
+
 			&::before
 				content: '\f105'
 		.slick-prev
 			left: 30px
+			+media-breakpoint-down(md)
+				left: 10px
 			&::before
 				content: '\f104'
 		
@@ -32,6 +46,8 @@
 			+pos(abs, null null 30px null)
 			left: 50%
 			+transform(translateX(-50%))
+			+media-breakpoint-down(md)
+				bottom: 10px
 			li
 				display: inline-block
 				width: 10px
