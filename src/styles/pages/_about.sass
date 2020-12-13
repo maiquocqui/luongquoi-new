@@ -44,6 +44,33 @@
 					background: #1b729f
 	.story
 		margin-bottom: 50px
+		.home-title.text-center
+			font-family: 'Fira Sans Condensed', sans-serif
+			+fs(30rem)
+			font-weight: 700
+			line-height: 1.2
+			color: $blue !important
+			text-transform: uppercase
+			text-align: left !important
+			margin-bottom: 15px
+			> *
+				font-family: 'Fira Sans Condensed', sans-serif
+				font-weight: 700
+			+media-breakpoint-down(lg)
+				+fs(22rem)
+			+media-breakpoint-down(sm)
+				+fs(18rem)
+			&::after
+				content: ''
+				display: block
+				width: 181px
+				height: 16px
+				margin-top: 10px
+				background: url(../img/line.png) center no-repeat
+				+media-breakpoint-down(lg)
+					height: 10px
+					background-size: auto 100%
+					background-position: left center
 		.bt-read
 			color: $blue
 			cursor: pointer
@@ -156,6 +183,9 @@
 				padding: 30px 50px
 				+media-breakpoint-down(sm)
 					padding: 20px 30px
+				.content
+					+media-breakpoint-up(lg)
+						+fs(20rem)
 	
 	.htcl
 		> .row
