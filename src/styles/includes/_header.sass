@@ -219,20 +219,47 @@ header
 		align-content: center
 		+media-breakpoint-down(lg)
 			padding: 15px 40px
-		a
-			+fs(13rem)
-			font-weight: 500
-			color: #5e76a5
-			+ a
-				&:before
-					content: '/'
-					color: #5e76a5
-					margin: 0px 5px
-			&.active
+		// a
+		// 	+fs(13rem)
+		// 	font-weight: 500
+		// 	color: #5e76a5
+		// 	+ a
+		// 		&:before
+		// 			content: '/'
+		// 			color: #5e76a5
+		// 			margin: 0px 5px
+		// 	&.active
+		// 		color: $white
+		// 		+media-breakpoint-down(lg)
+		// 			color: $blue
+		// 			font-weight: 700
+		.dropdown
+			&:hover, &:active, &:focus
+				outline: none
+				border: none
+			.dropdown-toggle
+				+fs(13rem)
+				font-weight: 500
+				background: none
+				margin: 0
+				padding: 0
+				border: none
 				color: $white
-				+media-breakpoint-down(lg)
-					color: $blue
-					font-weight: 700
+				&:hover, &:active, &:focus
+					outline: none
+					border: none
+			.dropdown-menu
+				background: $main
+				width: 100px
+				min-width: 0
+				max-width: unset
+				.dropdown-item
+					+fs(13rem)
+					color: $white
+					opacity: 0.8
+					&:hover, &.active
+						opacity: 1
+						background: color-rgba($white,0.1)
 	
 	.search
 		margin-left: 15px
