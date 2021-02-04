@@ -245,11 +245,15 @@ header
 				padding: 0
 				border: none
 				color: $white
+				+media-breakpoint-down(lg)
+					color: $main
+					+fs(16rem)
+					text-transform: uppercase
 				&:hover, &:active, &:focus
 					outline: none
 					border: none
 			.dropdown-menu
-				background: $main
+				background: $red
 				width: 100px
 				min-width: 0
 				max-width: unset
