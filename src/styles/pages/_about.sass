@@ -426,3 +426,142 @@
 				height: 100px
 			+media-breakpoint-down(sm)
 				height: 80px
+
+.qt-title
+	display: inline-block
+	color: $white
+	background: #f5b64f
+	padding: 7px 25px 5px
+	+fs(24rem)
+	+bor-rad(10px)
+	text-transform: uppercase
+	font-weight: 500
+	margin-bottom: 10px
+
+.qt-quote2
+	color: $white
+	background: #f47958
+	+bor-rad(20px)
+	padding: 40px 25px
+	+pos(rel,null)
+	&::before
+		content: ''
+		display: block
+		width: 14px
+		height: 14px
+		background: $white
+		border: 2px solid #f5b64f
+		+bor-rad(3px)
+		+pos(abs, 10px null null 10px)
+		z-index: 1
+	&::after
+		content: ''
+		display: block
+		width: 14px
+		height: 14px
+		background: #f5b64f
+		border: 2px solid #f5b64f
+		+bor-rad(3px)
+		+pos(abs, 16px null null 16px)
+		z-index: 1
+	.content
+		color: $white
+		p
+			&:last-child
+				margin-bottom: 0
+
+.staff-detail
+	.content
+		+clearfix()
+		+fs(18rem)
+		line-height: 1.5
+	.big-name
+		font-family: 'Fira Sans Condensed', sans-serif
+		line-height: 1
+		margin-bottom: 5px
+		font-weight: 700
+		text-transform: uppercase
+		+fs(28rem)
+		+media-breakpoint-up(xl)
+			+fs(42rem)
+	.big-title
+		font-weight: 600
+		font-family: 'Fira Sans Condensed', sans-serif
+		margin-bottom: 50px
+		+fs(16rem)
+		+media-breakpoint-up(xl)
+			+fs(24rem)
+	.content-float
+		+clearfix()
+		max-width: 700px
+		margin: 0 auto
+		+pos(rel,null)
+		hr
+			display: block
+			background: darken($white, 10%)
+			width: 80%
+			height: 2px
+			margin: 40px auto
+		.big-img
+			width: 100%
+			+pos(rel,null)
+			margin-bottom: 15px
+			+media-breakpoint-up(xl)
+				float: left
+				width: 300px
+				margin-left: -150px
+				margin-right: 25px
+			img
+				width: 100%
+				margin: 0
+			.btn-download
+				width: 40px
+				height: 40px
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				background: $main
+				color: $white
+				+bor-rad(100px)
+				+pos(abs, null 15px 15px null)
+				&:hover
+					background: $blue
+					color: $white
+
+.staff-slide
+	width: 100%
+	margin: 40px 0
+	+pos(rel,null)
+	.slick-prev, .slick-next
+		+pos(abs, 50% null null null)
+		+transform(translateY(-50%))
+		z-index: 5
+		color: $white
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		width: 40px
+		height: 40px
+		+bor-rad(50px)
+		background: color-rgba($black,0.3)
+		&:hover
+			background: color-rgba($black,0.5)
+	.slick-prev
+		+pos(abs, null null null 10px)
+		+fs(0)
+		&::before
+			content: '\f104'
+			+fs(24rem)
+	.slick-next
+		+pos(abs, null 10px null null)
+		+fs(0)
+		&::before
+			content: '\f105'
+			+fs(24rem)
+	img
+		width: 100%
+		margin: 0
+	.slick-dots
+		display: none !important

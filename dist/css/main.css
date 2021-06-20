@@ -10052,6 +10052,181 @@ body.searchresults .home-banner {
     .cert-slide-4 .item .cert {
       height: 80px; } }
 
+.qt-title {
+  display: inline-block;
+  color: #fff;
+  background: #f5b64f;
+  padding: 7px 25px 5px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 10px; }
+
+.qt-quote2 {
+  color: #fff;
+  background: #f47958;
+  border-radius: 20px;
+  padding: 40px 25px;
+  position: relative; }
+  .qt-quote2::before {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border: 2px solid #f5b64f;
+    border-radius: 3px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1; }
+  .qt-quote2::after {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: #f5b64f;
+    border: 2px solid #f5b64f;
+    border-radius: 3px;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 1; }
+  .qt-quote2 .content {
+    color: #fff; }
+    .qt-quote2 .content p:last-child {
+      margin-bottom: 0; }
+
+.staff-detail .content {
+  *zoom: 1;
+  font-size: 1.125rem;
+  line-height: 1.5; }
+  .staff-detail .content:before, .staff-detail .content:after {
+    content: " ";
+    display: table; }
+  .staff-detail .content:after {
+    clear: both; }
+
+.staff-detail .big-name {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  line-height: 1;
+  margin-bottom: 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.75rem; }
+  @media (min-width: 1200px) {
+    .staff-detail .big-name {
+      font-size: 2.625rem; } }
+
+.staff-detail .big-title {
+  font-weight: 600;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  margin-bottom: 50px;
+  font-size: 1rem; }
+  @media (min-width: 1200px) {
+    .staff-detail .big-title {
+      font-size: 1.5rem; } }
+
+.staff-detail .content-float {
+  *zoom: 1;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative; }
+  .staff-detail .content-float:before, .staff-detail .content-float:after {
+    content: " ";
+    display: table; }
+  .staff-detail .content-float:after {
+    clear: both; }
+  .staff-detail .content-float hr {
+    display: block;
+    background: #e6e6e6;
+    width: 80%;
+    height: 2px;
+    margin: 40px auto; }
+  .staff-detail .content-float .big-img {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px; }
+    @media (min-width: 1200px) {
+      .staff-detail .content-float .big-img {
+        float: left;
+        width: 300px;
+        margin-left: -150px;
+        margin-right: 25px; } }
+    .staff-detail .content-float .big-img img {
+      width: 100%;
+      margin: 0; }
+    .staff-detail .content-float .big-img .btn-download {
+      width: 40px;
+      height: 40px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      background: #333;
+      color: #fff;
+      border-radius: 100px;
+      position: absolute;
+      right: 15px;
+      bottom: 15px; }
+      .staff-detail .content-float .big-img .btn-download:hover {
+        background: #1d428a;
+        color: #fff; }
+
+.staff-slide {
+  width: 100%;
+  margin: 40px 0;
+  position: relative; }
+  .staff-slide .slick-prev, .staff-slide .slick-next {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -khtml-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 5;
+    color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.3); }
+    .staff-slide .slick-prev:hover, .staff-slide .slick-next:hover {
+      background: rgba(0, 0, 0, 0.5); }
+  .staff-slide .slick-prev {
+    position: absolute;
+    left: 10px;
+    font-size: 0; }
+    .staff-slide .slick-prev::before {
+      content: '\f104';
+      font-size: 1.5rem; }
+  .staff-slide .slick-next {
+    position: absolute;
+    right: 10px;
+    font-size: 0; }
+    .staff-slide .slick-next::before {
+      content: '\f105';
+      font-size: 1.5rem; }
+  .staff-slide img {
+    width: 100%;
+    margin: 0; }
+  .staff-slide .slick-dots {
+    display: none !important; }
+
 .system-page {
   padding: 50px 0; }
   @media (max-width: 767.98px) {
